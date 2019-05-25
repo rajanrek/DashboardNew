@@ -1,0 +1,26 @@
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)"
+             size="default"
+             color="#fff"
+             type="line-spin-fade">
+</ngx-spinner>
+<workspace-menubar></workspace-menubar>
+<div class="split left">
+  <div class="centered">
+    <h5 class="textColor">Video 1</h5>
+    <video width="320" height="240" controls>
+      <source src="http://s3.ap-south-1.amazonaws.com/garudauav-in/mission/1d7a08ee-161b-40eb-8b13-4338e9c189e4/videos/big_buck_bunny.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <h5 class="textColor">Video 2</h5>
+    <video width="320" height="240" controls>
+      <source src="http://s3.ap-south-1.amazonaws.com/garudauav-in/mission/1d7a08ee-161b-40eb-8b13-4338e9c189e4/videos/big_buck_bunny.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+<workspace-comparepanel [surveydropdown]="projectSurveys" [showTag]="true" (sendDatatoCompare)="recieveCompareData($event)" [tag]="tags"></workspace-comparepanel>

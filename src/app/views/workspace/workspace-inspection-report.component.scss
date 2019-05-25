@@ -1,0 +1,334 @@
+.inspection-heading {
+  padding-left: 17px;
+  background-color: #fff !important;
+  height: 45px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 3px 12px 0 rgba(0,0,0,.16) !important;
+  box-shadow: 0 3px 12px 0 rgba(0,0,0,.16) !important;
+  color: #27B1BB !important;
+}
+
+.ins-annotation-details {
+  width: 100%;
+  border-radius: 5px;
+  background-color: #fff !important;
+  position: relative;
+  z-index: 300;
+  padding: 9px 17px;
+}
+
+.ins-annotation-details ul {
+  display: inline-block;
+  padding: 0;
+  list-style: none;
+  width: 48%;
+  font-weight: 500;
+  vertical-align: top;
+  margin-bottom: 0;
+}
+
+.right {
+  margin-left: 10px;
+}
+
+.left {
+  margin-right: 10px;
+}
+
+.ins-annotation-details ul li .filename {
+  max-width: 277px;
+  overflow: hidden;
+}
+
+.ins-annotation-details ul li {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  height: 30px;
+  overflow: hidden;
+}
+
+.ins-annotation-details .gmap-icon {
+  max-height: 20px;
+  margin-right: 10px;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+.ins-annotation-details .user-tag {
+  font-weight: 500;
+  border-top: 1px solid #ddd;
+  padding-top: 4px;
+}
+
+.ins-annotation-details .usertag-span {
+  display: inline-block;
+  padding: 3px 6px;
+  background-color: #eee;
+  border-radius: 3px;
+  margin-right: 5px;
+  font-weight: 500;
+  margin-top: 3px;
+}
+
+.btnmargin {
+  margin-top: 10px;
+}
+
+.pgrsStyle {
+  width: 15%;
+  margin: auto !important;
+  position: fixed;
+  /* margin-top: 20% !important; */
+  right: 41%;
+  /* top: -0%; */
+  top: 384px;
+  z-index: 9999;
+  height: 17px;
+  border-radius: 8px;
+}
+
+.bgrnd {
+  display: block;
+  position: relative;
+  background-color: #fff !important;
+  height: 215mm;
+  width: 209mm;
+  margin: 10px auto;
+  /*font-family: Montserrat;*/
+  overflow: hidden;
+  padding: 7px 7px 30px;
+}
+
+.panel {
+  margin-left: -6px !important;
+  width: 250px !important;
+  max-height: 254px;
+  /*width:250px !important;*/
+}
+
+.maginTop {
+  margin-top: 10px;
+}
+
+.mapDisplay {
+  display: none;
+}
+
+
+.sevDivHeight {
+  height: 35px !important;
+  background-color: #f2f2f2 !important;
+  margin-bottom: 20px;
+}
+
+.wetrDivHeight {
+  height: 2% !important;
+  background-color: #f2f2f2 !important;
+}
+
+.wetrDivHeight span {
+  font-size: 13px;
+  margin-top: -10px;
+  margin-right: 10px;
+}
+
+.summarySideBar {
+  min-height: 369px;
+  background-color: #f2f2f2 !important;
+  min-width: 200px;
+  border-radius: 4px;
+}
+
+#summaryContent p {
+  font-size: 13px;
+  margin-top: 8px;
+  margin-right: 10px;
+}
+
+.navContent {
+  height: 20px;
+  width: 100%;
+  padding: 30%;
+  margin-top: 15px;
+  background-color: white;
+  border-radius: 10%;
+}
+
+.sidenavWell {
+  height: 14%;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 10px;
+  text-align: center;
+  color: #27B1BB !important;
+}
+
+.sidePanelTop {
+  margin-top: 10px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: -40px;
+  /*width:50%;*/
+  max-height: 100px;
+}
+
+.badge {
+  text-transform: uppercase;
+  padding: 3px 7px;
+  font-size: 11px;
+  margin-top: 1px;
+  margin-left: -17px;
+  position: absolute;
+}
+.panel-info > .panel-heading {
+  background-color: #04a2b3;
+}
+.panel-info > .panel-heading {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.panel-heading {
+  border: none !important;
+  padding: 10px 20px;
+}
+ul {
+  list-style-type: none;
+}
+.inspection-heading {
+  padding-left: 17px;
+  background-color: #fff !important;
+  height: 45px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 3px 12px 0 rgba(0,0,0,.16) !important;
+  box-shadow: 0 3px 12px 0 rgba(0,0,0,.16) !important;
+  color: #27B1BB !important;
+}
+.fluidMarginTop {
+  margin-top: 40px;
+}
+.sevDivHeight {
+  height: 35px !important;
+  background-color: #f2f2f2 !important;
+  margin-bottom: 20px;
+}
+.wetrDivHeight {
+  height: 2% !important;
+  background-color: #f2f2f2 !important;
+}
+#SummaryNav {
+  background-color: #f2f2f2 !important;
+  width: 25%;
+  /* position: absolute; */
+  height: 65%;
+  border-radius: 5px;
+  padding-bottom: 25px;
+}
+.sidenavWell {
+  height: 14%;
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 10px;
+  text-align: center;
+  color: #27B1BB !important;
+}
+.bgrnd {
+  display: block;
+  position: relative;
+  background-color: #fff !important;
+  height: 215mm;
+  width: 209mm;
+  margin: 10px auto;
+  /* font-family: Montserrat; */
+  overflow: hidden;
+  padding: 7px 7px 30px;
+}
+.badgeLow {
+  text-transform: uppercase;
+  padding: 3px 7px;
+  font-size: 11px;
+  margin-top: -9px;
+  margin-left: -26px;
+  position: absolute;
+  background-color: rgba(0,146,69,1.00);
+  border-radius: 10px;
+  color: white;
+}
+.badgeMed {
+  text-transform: uppercase;
+  padding: 3px 7px;
+  font-size: 11px;
+  margin-top: -9px;
+  margin-left: -40px;
+  position: absolute;
+  background-color: rgba(204,204,0,1.00);
+  border-radius: 10px;
+  color: white;
+}
+.badgeHigh {
+  text-transform: uppercase;
+  padding: 3px 7px;
+  font-size: 11px;
+  margin-top: -9px;
+  margin-left: -24px;
+  position: absolute;
+  background-color: rgba(193,39,45,1.00);
+  border-radius: 10px;
+  color: white;
+}
+.badgeInfo {
+  text-transform: uppercase;
+  padding: 3px 7px;
+  font-size: 11px;
+  margin-top: -9px;
+  margin-left: -15px;
+  position: absolute;
+  background-color: rgba(0,113,188,1.00);
+  border-radius: 10px;
+  color: white;
+}
+.contTopMargin {
+  margin-top: 40px;
+}
+.inputbox{
+   margin-top: 20%;
+  border-radius: 1px solid rgb(21, 185, 226);
+  
+  
+}
+#comp{
+  font-size: 2.1875rem;
+  border-bottom: 3px solid #101010;
+  color: white;
+  text-align: center;
+  background-color: #0a9be0
+}
+.top-left {
+  position: absolute;
+  font-size: 2.1875rem;
+  top: 43%;
+  left: 34%;
+  background-color: #0a9be0;
+  border-radius: 30px;
+  text-align: center;
+  color: white;
+  transform: translate(-50%, -50%);
+}

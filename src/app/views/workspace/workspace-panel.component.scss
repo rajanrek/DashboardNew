@@ -1,0 +1,322 @@
+.left_side_bar {
+  background: #fafafa;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  right: 0;
+  width: 300px;
+  bottom: 0;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.05);
+  transform: translate(0);
+  transition: all .4s ease;
+  padding: 0;
+}
+
+
+.side-bar-hide.left_side_bar {
+  transform: translate3d(300px, 0, 0);
+}
+
+button.btn.ws_btn {
+  background: #44a2d2;
+  color: #fff;
+  font-size: 20px;
+  padding: 13px 5px;
+  border-radius: 7px 0 0 7px;
+  position: absolute;
+  left: -25px;
+  top: 50%;
+  margin-top: -29px;
+  box-shadow: none;
+  width: 25px;
+  height: 58px;
+  line-height: 1;
+  text-align: right;
+}
+
+button.btn.ws_btn::before {
+  content: "\f0da";
+  font-family: fontawesome;
+  font-size: 25px;
+}
+
+.side-bar-hide button.btn.ws_btn::before {
+  content: "\f0d9";
+}
+
+.sb_top {
+  background: #44a2d2;
+  color: #fff;
+  padding: 12px;
+  display: flex;
+}
+
+.sb_top a {
+  color: #fff;
+}
+
+.sb_top a:first-child {
+  flex-grow: 1;
+}
+
+.left_side_bar .title {
+  font-size: 15px;
+  padding: 12px 14px;
+  font-weight: 500;
+  border-bottom: 1px solid #ddd;
+}
+
+.ws_dt_1 ul {
+  padding: 10px 10px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border-bottom: 1px solid #ddd;
+}
+
+.ws_dt_1 ul li {
+  width: 44%;
+  padding: 7px 0;
+}
+
+.ws_dt_1 ul li a {
+  background: #cfd8dc;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 10px 5px;
+  color: #333;
+  border-radius: 10px;
+}
+
+.ws_dt_1 ul li a:hover, .ws_dt_1 ul li a.active {
+  text-decoration: none;
+  background: #44a2d2;
+  color: #fff;
+}
+
+.ws_dt_2 p {
+  padding: 0 15px;
+}
+
+.inp-top-actions img {
+  width: 30px;
+}
+
+.compare select {
+  background: #cfd8dc;
+  padding: 7px 25px;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+}
+.brochure-poster1{
+  width: 50%;
+  height: 80px;
+  padding-left: 1px;
+  transition: transform .2s;
+  margin: 0 auto;
+  
+}
+.brochure-poster2{
+  width: 50%;
+  height: 80px;
+  padding: 0px 4px;
+  transition: transform .2s;
+  transition: transform .2s;
+}
+
+// .brochure-poster2:hover {
+//   -ms-transform: scale(8.5); /* IE 9 */
+//   -webkit-transform: scale(8.5); /* Safari 3-8 */
+//   transform: scale(8.5); 
+//   margin-left: -120%;
+
+// }
+
+
+// .brochure-poster1:hover {
+//   -ms-transform: scale(8.5); /* IE 9 */
+//   -webkit-transform: scale(8.5); /* Safari 3-8 */
+//   transform: scale(8.5); 
+//   margin-left: -120%;
+// }
+img#myImg:hover{
+  -ms-transform: scale(8.5); /* IE 9 */
+  -webkit-transform: scale(8.5); /* Safari 3-8 */
+  transform: scale(8.5); 
+  margin-left: -130%;
+  margin-top: 150px;
+  border:1px solid rgb(16, 164, 190); 
+}
+
+a.lightbox img {
+  height: 150px;
+  border: 3px solid white;
+  box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+  margin: 94px 20px 20px 20px;
+  }
+  
+  /* Styles the lightbox, removes it from sight and adds the fade-in transition */
+  
+  .lightbox-target {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  background: rgba(0,0,0,.7);
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  overflow: hidden;
+  }
+  
+  /* Styles the lightbox image, centers it vertically and horizontally, adds the zoom-in transition and makes it responsive using a combination of margin and absolute positioning */
+  
+  .lightbox-target img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left:0;
+  right:0;
+  bottom: 0;
+  max-height: 0%;
+  max-width: 0%;
+  border: 3px solid white;
+  box-shadow: 0px 0px 8px rgba(0,0,0,.3);
+  box-sizing: border-box;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  }
+  
+  /* Styles the close link, adds the slide down transition */
+  
+  a.lightbox-close {
+  display: block;
+  width:50px;
+  height:50px;
+  box-sizing: border-box;
+  background: white;
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  top: -80px;
+  right: 0;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  }
+  
+  /* Provides part of the "X" to eliminate an image from the close link */
+  
+  a.lightbox-close:before {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 1px;
+  background: black;
+  position: absolute;
+  left: 26px;
+  top:10px;
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  transform:rotate(45deg);
+  }
+  
+  /* Provides part of the "X" to eliminate an image from the close link */
+  
+  a.lightbox-close:after {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 1px;
+  background: black;
+  position: absolute;
+  left: 26px;
+  top:10px;
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+  }
+  
+  /* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
+  
+  .lightbox-target:target {
+  opacity: 1;
+  top: 0;
+  bottom: 0;
+  }
+  
+  .lightbox-target:target img {
+  max-height: 100%;
+  max-width: 100%;
+  }
+  
+  .lightbox-target:target a.lightbox-close {
+  top: 0px;
+  }
+  .img {
+    border-radius: 2px;
+    box-shadow: 0 0 5px #343436;
+    filter:brightness(1.1);
+    height: 150px;
+    width: 200px;
+  }
+  .img:target {
+    height: 450px;
+    width: 500px;
+  }
+  .img:target+.close {
+    display: block;
+  }
+  .img:target+.close+.expand{
+    display: none;
+  }
+  .close {
+    background-image: url(https://bit.ly/29QeT21);
+    background-repeat: no-repeat;
+    bottom: 418px;
+    display: none;
+    height: 32px;
+    left: 462px;
+    margin-top: -32px;  
+    position: relative;
+    width: 32px;
+  }
+  .expand{
+    bottom: 125px;
+    margin-left: -32px;
+    margin-right: 16px;
+    pointer-events: none;
+    position: relative;
+  }
+  #wrapper {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    width: 500px;
+  }
+  body{
+    background-image: linear-gradient(to bottom, #178FDD  68px,  antiquewhite 68px  );
+    height: 1000px;
+  }
+  h2{
+    color: #000;
+    font-family: bungee shade, georgia;
+    text-align: center;
+    text-shadow: 0 0 2px #343436; 
+  }
+
+
+#map-canvas {
+min-height: 250px;
+}

@@ -1,0 +1,175 @@
+        <div class="page-header" style="display:inline" >
+            <h3 >Organization Information</h3>
+          </div>
+
+            <form #myform="ngForm"  (ngSubmit)="onSubmit(myform)">
+     
+              <div class="row">
+                <div class="col-md-4">
+
+                  <fieldset class="form-group">
+                    <label class="control-label">
+                      <h6 class="text-success">Name</h6>
+                    </label>
+                    <div class="input-group">
+                      <div class="input-group-addon"><i class="glyphicon anra-ico_user_light"></i></div>
+                      <input type="text" class="form-control" name="Name" [(ngModel)]='organization.Name'
+                             placeholder="Name" />
+                    </div>
+                  </fieldset>
+
+                </div>
+
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label">
+                      <h6 class="text-success">Email</h6>
+                    </label>
+                    <div class="input-group">
+                      <div class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></div>
+                      <input type="email" class="form-control" name="email"
+                             [(ngModel)]='organization.ContactEmail' placeholder="Email" />
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label">
+                      <h6 class="text-success">Phone</h6>
+                    </label>
+                    <div class="input-group">
+                      <div class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></div>
+                      <input class="form-control" name="ContactPhone" [(ngModel)]='organization.ContactPhone'
+                             placeholder="Phone" />
+                    </div>
+                  </fieldset>
+                </div>
+
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label">
+                      <h6 class="text-success">Website</h6>
+                    </label>
+                    <div class="input-group">
+                      <div class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></div>
+                      <input type="url" class="form-control" name="Website" [(ngModel)]='organization.Website'
+                             placeholder="Website" />
+                    </div>
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label">
+                      <h6 class="text-success">Address</h6>
+                    </label>
+                    <textarea class="form-control" name="Address" [(ngModel)]='organization.Address' id="notes"
+                              rows="2"></textarea>
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label">
+                      <h6 class="text-success">Currency</h6>
+                    </label>
+                    <select name="organization.CurrencyId" class="form-control"
+                            [(ngModel)]="organization.CurrencyId">
+                      <option *ngFor="let item of organization.CurrencyLookup" [ngValue]="item.CurrencyId">
+                        {{item.Name}}
+                      </option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="col-md-8">
+                  <fieldset class="form-group">
+                    <label class="control-label">
+                      <h6 class="text-success">Survey Outputs:</h6>
+                    </label>
+                    <select name="organization.SurveyOutputId" multiple 
+                            class="form-control" >
+                      <option *ngFor="let surveyoutput of organization.SurveyOutputLookup"
+                              [ngValue]="surveyoutput.SurveyOutputId">
+                        {{surveyoutput.Name}}
+                      </option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label">
+                      <h6 class="text-success">Unit</h6>
+                    </label>
+                    <select name="organization.UnitId" class="form-control" [(ngModel)]="organization.UnitId">
+                      <option *ngFor="let orgUnit of organization.UnitLookup" [ngValue]="orgUnit.UnitId">
+                        {{orgUnit.Name}}
+                      </option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="col-md-12" style="border: 1px solid gray;  background:#44a2d2;">
+                  <h6 class=".bg-primary">Organization User Details:</h6>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label name="email">
+                      <h6 class="text-success">User ID:</h6>
+                    </label>
+                    <input type="text" class="form-control" name="Email" [(ngModel)]='organization.Email'
+                           placeholder="Email">
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="text-success">Password<span></span></label>
+                    <input type="password" name="Password" [(ngModel)]='organization.Password'
+                           class="form-control" id="password" placeholder="Password">
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="text-success">ReType Password<span></span></label>
+                    <input type="password" name="Password" [(ngModel)]='organization.Password'
+                           class="form-control" id="confirmpassword" placeholder="Confirm Password">
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label>
+                      <h6 class="text-success">Package List</h6>
+                    </label>
+                    <select name="organization.PackageId" class="form-control"
+                            [(ngModel)]="organization.PackageId">
+                      <option *ngFor="let pkgitem of organization.PackageLookup"
+                              [ngValue]="pkgitem.PackageId">
+                        {{pkgitem.PackageName}}
+                      </option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label for="name">
+                      <h6 class="text-success">First Name:</h6>
+                    </label>
+                    <input type="text" name="FirstName" [(ngModel)]='organization.FirstName'
+                           class="form-control" placeholder="First Name">
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label>
+                      <h6 class="text-success">Last Name:</h6>
+                    </label>
+                    <input type="text" name="LastName" [(ngModel)]='organization.LastName' class="form-control"
+                           placeholder="Last Name">
+                  </fieldset>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-lg">
+                  <i class="fa fa-check" aria-hidden="true"></i> Save
+                </button>
+                &nbsp;
+                <button (click)="cancel()" class="btn btn-primary btn-lg">
+                  <i class="fa fa-times"></i> Cancel
+                </button>
+              </div>
+            </form>

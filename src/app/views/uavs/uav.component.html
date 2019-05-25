@@ -1,0 +1,127 @@
+
+<div class="page-header" style="display:inline">
+  <h3>UAV Information</h3>
+</div>
+
+<form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+  <div class="row">
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label class="control-label" name="name">Name</label>
+        <div class="input-group" >
+          <div class="input-group-addon"><i class="glyphicon glyphicon-tags"></i></div>
+          <input type="text" [(ngModel)]="uav.Name" formControlName="Name"  class="form-control" [ngClass]="{ 'is-invalid': submitted && f.Name.errors }" />
+          <div *ngIf="submitted && f.Name.errors" class="invalid-feedback">
+              <div *ngIf="f.Name.errors.required">First Name is required</div> 
+            </div>
+        </div>
+            
+      </fieldset>
+    </div>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label class="control-label" name="name">Device Id</label>
+        <div class="input-group">
+          <div class="input-group-addon"><i class="glyphicon glyphicon-tags"></i></div>
+          <input type="text"  name="DeviceId" [(ngModel)]="uav.DeviceId"  formControlName="DeviceId"  class="form-control" 
+          [ngClass]="{ 'is-invalid': submitted && f.DeviceId.errors }" />
+          <div *ngIf="submitted && f.DeviceId.errors" class="invalid-feedback">
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label class="control-label" name="name">Device Model Id</label>
+        <div class="input-group">
+          <div class="input-group-addon"><i class="glyphicon glyphicon-tags"></i></div>
+          <input type="text" name="Device" [(ngModel)]="uav.DeviceModelId"  formControlName="DeviceId"  class="form-control" 
+          [ngClass]="{ 'is-invalid': submitted && f.DeviceId.errors }" />
+          <div *ngIf="submitted && f.DeviceId.errors" class="invalid-feedback">
+          </div>
+         </div>
+      </fieldset>
+
+    </div>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label class="control-label" name="name">UIN</label>
+        <div class="input-group">
+          <div class="input-group-addon"><i class="glyphicon glyphicon-tags"></i></div>
+          <input type="text" name="UIN" class="form-control" placeholder="UIN" [(ngModel)]="uav.UIN" formControlName="DeviceId"  class="form-control" 
+          [ngClass]="{ 'is-invalid': submitted && f.uin.errors }" />
+          <div *ngIf="submitted && f.uin.errors" class="invalid-feedback">
+             </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label class="control-label" name="name">UAV DigiSky Id</label>
+        <div class="input-group">
+          <div class="input-group-addon"><i class="glyphicon glyphicon-tags"></i></div>
+          <input disabled type="text" name="UAVDigiSkyId" [(ngModel)]="uav.UAVDigiSkyId" class="form-control" placeholder="UAV DigiSky Id" formControlName="DeviceId"  class="form-control" 
+          [ngClass]="{ 'is-invalid': submitted && f.UAVDigiSkyId.errors }" />
+          <div *ngIf="submitted && f.UAVDigiSkyId.errors" class="invalid-feedback">
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label class="control-label">Organization</label> 
+        <select name="OrganizationId" class="form-control">
+          <option *ngFor="let org of uav.OrganizationLookup" [(ngModel)]="org.OrganizationId" name="Name">{{org.Name}}</option>
+        </select>
+      </fieldset>
+    </div>
+
+    <div class="col-md-6">
+      <fieldset class="form-group">
+        <label class="control-label">DigiSky Resistration Status</label>
+        <div class="onoffswitch">
+          <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" [(ngModel)]="uav.UAVDigiSkyRegistrationStatus">
+          <label class="onoffswitch-label" for="myonoffswitch">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+          </label>
+        </div>
+      </fieldset>
+    </div>
+
+    <div class="col-md-6">
+      <fieldset class="form-group">
+        <label class="control-label">Active</label>
+        <div class="onoffswitch2">
+          <input type="checkbox" name="onoffswitch2" class="onoffswitch2-checkbox" id="onoffswitch2" [(ngModel)]="uav.IsActive">
+          <label class="onoffswitch2-label" for="onoffswitch2">
+            <span class="onoffswitch2-inner"></span>
+            <span class="onoffswitch2-switch"></span>
+          </label>
+        </div>
+      </fieldset>
+    </div>   
+
+    <div class="col-md-12">
+      <fieldset class="form-group">
+        <label class="control-label">Notes</label>
+        <textarea class="form-control" name="notes" [(ngModel)]="uav.Notes" id="notes" rows="3"></textarea>
+      </fieldset>
+    </div>
+    <div class="col-md-12" >
+      <div class="form-group">
+
+      <button type="submit"  class="btn btn-primary btn-lg">
+        <i class="fa fa-check" aria-hidden="true"></i> Save
+      </button>
+      &nbsp;
+      <button class="btn btn-primary btn-lg" routerLink="/uavs">
+        <i class="fa fa-times" aria-hidden="true"></i> Cancel
+      </button>
+    </div>  
+    </div>
+  </div>
+</form>
+
+    
+

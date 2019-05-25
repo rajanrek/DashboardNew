@@ -1,0 +1,25 @@
+.card-group {
+    flex-direction: column;
+    margin-top: -60px;
+}
+main.main {
+    margin: 0 !important;
+    background-image: url(/assets/img/drone-bg.jpeg);
+    background-size: cover;
+    position: relative;
+}
+.app-body {
+    margin-top: 0 !important;
+}
+.logi_logo {
+    text-align: center;
+}
+main.main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(62, 168, 216, 0.25);
+}

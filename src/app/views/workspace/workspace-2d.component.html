@@ -1,0 +1,22 @@
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)"
+             size="default"
+             color="#fff"
+             type="line-spin-fade">
+</ngx-spinner>
+<workspace-menubar></workspace-menubar>
+
+<div class="animated fadeIn portfolio">
+     
+<div *ngIf="processTask && !processTask.isOrthomosaicTilesUploaded" class="noData">2D data not uploaded yet!</div>
+<h3 style="text-align: center; color: #2b4f5a">{{surveyName}}</h3> 
+<div style="display:block; width:100%;"> 
+ <div id="map2d" style="height:89.5vh;width:100%;position:relative;">
+   
+    </div>
+    
+</div>
+</div>
+
+
+<app-workspace-panel></app-workspace-panel>
+

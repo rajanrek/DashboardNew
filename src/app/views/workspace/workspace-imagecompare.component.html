@@ -1,0 +1,20 @@
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)"
+             size="default"
+             color="#fff"
+             type="line-spin-fade">
+</ngx-spinner>
+<workspace-menubar></workspace-menubar>
+<div class="split left">
+  <div class="centered">
+    <h5 class="textColor">Image 1</h5>
+    <img src="../assets/img/tower.jpeg" alt="logo" style="max-width:300px">
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <h5 class="textColor">Image 2</h5>
+    <img src="../assets/img/tower.jpeg" alt="logo" style="max-width:300px;">
+  </div>
+</div>
+<workspace-comparepanel [surveydropdown]="projectSurveys"  [tag]="tags" [showTag]="true" (sendDatatoCompare)="recieveCompareData($event)"></workspace-comparepanel>

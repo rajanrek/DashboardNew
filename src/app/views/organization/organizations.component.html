@@ -1,0 +1,40 @@
+<div class="profile_page">
+        <div class="row">
+            <div class="pr_top-sec">
+                <div class="col-md-12">
+                        <h2 class="pull-left">Organizations List</h2>
+                        <div class="right-botton pull-right change-password">
+                            <button type="button" class="btn btn-primary btn-md" routerLink="/organizations/organization/{{0}}"><i class="fa fa-plus" aria-hidden="true"></i> Add Organization</button>
+                        </div>
+                </div>
+                
+            </div>
+        </div>
+       
+</div>
+<table>
+    <tr   >
+      <th style="font-weight:600;">Organization Name</th>
+      <th style="font-weight:600;">Contact</th>
+      <th style="font-weight:600;">Email</th>
+      <th style="font-weight:600;">Action</th>                                                  
+    </tr>
+    <tbody >
+    <tr *ngFor="let org of organizations">
+    <th style="font-weight:400;">{{org.Name}}</th> 
+    <th style="font-weight:400;">{{org.ContactPhone}}</th>
+    <th style="font-weight:400;">{{org.ContactEmail}}</th>
+   <th> 
+<a style="padding:4px; color: #44a2d2" title="Edit" routerLink="/organizations/organization/{{org.OrganizationId}}">
+    <i class="fa fa-pencil-square-o" aria-hidden="true" ></i> 
+</a>
+<a style="padding:4px; color: #44a2d2" title="Delete"  (click)="deleteOrganization(org.OrganizationId)">
+    <i class="fa fa-trash" aria-hidden="true"></i> 
+</a>
+<a  title="View" style="color: #44a2d2" routerLink="/organizations/organizationview/{{org.OrganizationId}}">
+    <i class="fa fa-eye" aria-hidden="true"></i>
+    
+</a></th>
+    </tr>
+</tbody>
+  </table>

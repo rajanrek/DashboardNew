@@ -1,0 +1,250 @@
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)"
+             size="default"
+             color="#fff"
+             type="line-spin-fade">
+</ngx-spinner>
+<workspace-menubar></workspace-menubar>
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="container">
+    <div class="row">
+      <!--search bar-->
+      <!--<div class="col-md-3">
+        <fieldset class="form-group">
+          <input type="text" class="form-control" placeholder="Search" />
+        </fieldset>
+      </div>-->
+      <div class="col-md-9 filterdataMargin">
+        <span *ngFor="let selectedFilter of dataToFilterArray" class="filter">
+          {{selectedFilter}}
+          <i class="remove-btn fa fa-times" (click)="removeSelectedFilterTag(selectedFilter)"></i>
+        </span>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="searchTagModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog filtermodal" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="searchTagModalLabel">Select Filter</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h5>Severity:</h5>
+                    <span *ngFor="let sevrityname of SeverityFilterData" class="filter" (click)="searchbyTag(sevrityname)">{{sevrityname}}</span>
+                  </div>
+                  <div class="col-md-12">
+                    <h5>Annotation Type: </h5>
+                    <span *ngFor="let annotationtypeName of AnnotationTypeFilterData" class="filter" (click)="searchbyTag(annotationtypeName)">{{annotationtypeName}}</span>
+                  </div>
+                  <div class="col-md-12">
+                    <h5>Tags Filter:</h5>
+                    <span *ngFor="let tag of AssignTagFilterData" class="filter" (click)="searchbyTag(tag)">{{tag}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card ">
+        <!--<div class="card-header ">
+          Inspection
+        </div>-->
+        <div class="card-body ">
+          <div class="container-work-gl">
+            <!--<div class="container">-->
+            <div class="row inp-map-main">
+              <div class="inp-map-left">
+                <div class="clearfix">
+                  <h2 class="insp-title" *ngIf="isLoaded"> {{MissionName}}</h2>
+                  <!------top status------>
+                  <div class="inp-top-status" *ngIf="isLoaded && images.length>0">
+                    <a title="Status: High">
+                      <span class="high status">High</span>
+                      <span class="count">{{medialist.totalHighCount}}</span>
+                    </a>
+                    <a title="Status: Medium">
+                      <span class="medium status">Medium</span>
+                      <span class="count">{{medialist.totalMediumCount}}</span>
+                    </a>
+                    <a title="Status: Low">
+                      <span class="low status">Low</span>
+                      <span class="count">{{medialist.totalLowCount}}</span>
+                    </a>
+                    <a title="Status: Total">
+                      <span class="total status">Total</span>
+                      <span class="count">{{medialist.totalInfoCount}}</span>
+                    </a>
+
+                  </div>
+                </div>
+                <div class="inp-map-left-inner">
+                  <div class="mapcaretshowhide" *ngIf="imageView && !showPhotoSwipeGallery" (click)="showHideMiniMap()" title="toggle-mini-map">
+                    <i class="fa fa-lg  fa-caret-down"></i>
+                  </div>
+                  <div id="map" [class]="mapView ? 'map':'mini-ol3-view'"></div>
+                  <div id="map2" [class]="mapView && map2 !==undefined ? 'mini-ol3-view':''"></div>
+                  <div *ngIf="imageView && currentImageIndex > 0" class="inspection img-nav img-nav-btn-left" title="Click to show previous image" (click)="gotoPreviousSlide()"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+                  <div *ngIf="imageView && currentImageIndex > 0" class="inspection img-nav img-nav-btn-right" title="Click to show next image" (click)="gotoNextSlide()"><i class="fa fa-chevron-right" aria-hidden="true"></i></div>
+                  <!--<workspace-side-bar if.bind="sidePanel" drawnpoints.bind="drawnPoints" display.two-way="sidePanel" imagedetails.bind="imageDetails" cancelannotation.call="cancelAnnotation()" currentannotation.bind="currentAnnotation"></workspace-side-bar>-->
+                  <workspace-sidebar *ngIf="sidePanel" [currentannotation]="currentAnnotation" [imagedetails]="imageDetails" [drawnpoints]="drawnPoints" (closeAnnotationPanel)="recieveChildData($event)" (deleteannotation)="deleteAnnotationCall()"></workspace-sidebar>
+                  <div class="inspection-map-btn-stack right no-print"></div>
+                  <!---image details---->
+                  <div class="inspection-details" *ngIf="isLoaded && showDetails">
+                    <div class="insp-dt-1 col-md-12" *ngIf="imageView && !tagView">
+                      <h5>Image Details</h5>
+                      <ul>
+                        <li class="liStyle"><span>File:</span><span class="pull-right"> {{currentImage.name}} </span></li>
+                        <li class="liStyle"><span>Date:</span><span class="pull-right"> {{metaData.TimeStamp}} </span></li>
+                        <li class="liStyle"><span>Resolution:</span><span class="pull-right">{{metaData.Width}} x {{metaData.Height}} </span></li>
+                        <li class="liStyle"><span>Camera:</span><span class="pull-right"> {{metaData.CameraMake}} {{metaData.CameraModel}} </span></li>
+                        <li class="liStyle"><span>Focal:</span><span class="pull-right"> {{metaData.FocalLength}} </span></li>
+                        <li class="liStyle"><span>Shutter Speed:</span><span class="pull-right"> {{metaData.ShutterSpeed}} </span></li>
+                        <li class="liStyle"><span>ISO:</span><span class="pull-right">{{metaData.ISOSpeedRatings}} </span></li>
+                        <li class="liStyle"><span>Latitude:</span><span class="pull-right">{{metaData.Latitude}} </span></li>
+                        <li class="liStyle"><span>Longitude:</span><span class="pull-right">{{metaData.Longitude}} </span> </li>
+                        <li class="liStyle" title="Above Sea Level"><span>Altitude:</span><span class="pull-right"> {{metaData.Altitude}} ASL </span></li>
+                        <li class="liStyle"><span>Orientation:</span><span style="margin-left:50px;"> {{metaData.Orientation}} </span></li>
+                      </ul>
+                    </div>
+                    <div class="insp-dt-3 col-md-12" *ngIf="!imageView && showDetails">
+                      <h5>Inspection Details</h5>
+                      <ul>
+                        <li class="liStyle"><span>Name:</span><span class="pull-right"> {{mission.Name}}</span></li>
+                        <li class="liStyle"><span>Status:</span><span class="pull-right"> {{mission.StatusText}} </span></li>
+                        <li class="liStyle"><span>created:</span><span class="pull-right">{{mission.DateCreated}} </span></li>
+                        <li class="liStyle"><span>Images:</span><span class="pull-right"> {{images.length}} of {{images.length}} </span></li>
+                        <!--<li class="liStyle"><span>Videos:</span><span class="pull-right"> {{videos.length} }of {{videos.length}} </span></li>-->
+                      </ul>
+                    </div>
+                  </div>
+                  <!---image details end---->
+                  <!---tag details begins---->
+                  <div class="inspection-details" *ngIf="images && images.length > 0 && isLoaded && tagView">
+                    <div class="insp-dt-2 col-md-6" *ngIf="tagView">
+                      <div class="insp-tage">
+                        <h5>Tags</h5>
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Add Tag" id="tagValue" [(ngModel)]="tagValue">
+                          <span class="input-group-addon" id="tag" (click)="addUserTag()" style="cursor:pointer;"><i class="fa fa-plus-circle" aria-hidden="true"></i></span>
+                        </div>
+                        <div> <span class="selectedAnnotationStyle" *ngFor="let tag of userDefinedTags let i = index" [id]="i" (click)="changeStyle(i,tag.Tag)">{{tag.Tag}}</span></div>
+                        <div *ngIf="AssignUnassignTag && AssignUnassignTag.length>0"> {{AssignUnassignTag.length}} Tag Selected! </div>
+                        <button class="btn btn-primary btn-sm btnStyle" (click)="assignTag()">Assign</button>
+                        <button class="btn btn-primary btn-sm btnStyle" (click)="UnassignTag()">UnAssign</button>
+                      </div>
+                    </div>
+                  </div>
+                  <!---tag details ends---->
+                </div>
+              </div>
+              <div class="inp-map-right" *ngIf="isLoaded">
+                <!-----------top actions---------->
+                <div class="inp-bt-actions-wrap">
+                  <div class="inp-top-actions">
+                    <a class="nav-item utility" title="Tag" (click)="toggleTagView()" *ngIf="imageView">
+                      <img src="/assets/img/icons/tagging.svg">
+                    </a>
+                    <a class="nav-item utility" title="Delete" (click)="deleteItem()" *ngIf="imageView">
+                      <img src="/assets/img/icons/trash.svg">
+                    </a>
+                    <a class="nav-item utility" title="Click to switch between views" (click)="changeView()" *ngIf="map !==undefined && map2!==undefined">
+                      <img src="/assets/img/icons/tagging.svg">
+                    </a>
+                    <a class="nav-item utility" title="Download" (click)="downloadImage(img)" *ngIf="imageView">
+                      <img src="/assets/img/icons/download.svg">
+                    </a>
+                    <a class="nav-item utility" title="Details" (click)="toggleDetails()">
+                      <img src="/assets/img/icons/more-detail.svg">
+                    </a>
+                    <a class="nav-item utility" title="Annotate" (click)="createAnnotation()" *ngIf="imageView">
+                      <img src="/assets/img/icons/pencil.svg">
+                    </a>
+                  </div>
+                  <!-----------top actions end---------->
+                  <ul class="inp-mp-top">
+                    <li class="add-filter-btn top-icons" *ngIf="isImageUploaded && processStatus == 0">
+                      <button type="button" class="btn" (click)="processData()" title="Process Data">
+                        <i class="fa fa-gear fa-spin" aria-hidden="true"></i>
+                      </button>
+                    </li>
+                    <li class="add-filter-btn top-icons">
+                      <button type="button" class="btn" title="Add Filter" data-toggle="modal" data-target="#searchTagModal" [disabled]="SeverityFilterData.length<=0 && AssignTagFilterData<=0 && AnnotationTypeFilterData<=0">
+                        <i class="fa fa-filter" aria-hidden="true"></i>
+                      </button>
+                    </li>
+                    <li class="add-filter-btn top-icons" data-placement="bottom" if.bind="isImageUploaded">
+                      <button type="button" class="btn" title="Generate Report" (click)="generateReport()">
+                        <i class="fa fa-sticky-note" aria-hidden="true"></i>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <!--<div class="inp-search-bx"><input type="search"><i class="fa fa-search" aria-hidden="true"></i></div>-->
+                <h3 class="inp-thum-title" (click)="toggle('images')">
+                  Mission Images
+                  <i class="fa fa-caret-down" aria-hidden="true" *ngIf="!toggleImages"></i>
+                  <i class="fa fa-caret-up" aria-hidden="true" *ngIf="toggleImages"></i>
+                </h3>
+                <div *ngIf="toggleImages" class="inp-img-thum-main">
+                  <div class=" inp-img-thum imgMargin" *ngFor="let img of images let i = index">
+                    <img [class]="i==selected ? 'thumbnail image activethumbnail':'thumbnail image'" [id]="img.MediaFileId" alt="img" (click)="onImageThumbnailClick(i,img)"
+                         [src]="img.ThumbnailFileLocation">
+
+                    <div class="top-left">{{img.name}}</div>
+                    <div class="bottom-left">
+
+                      <span *ngFor="let severity of img.FilterseverityTypeForImage">
+                        <a title="Status: High" *ngIf="severity.Severity=='High'" style="margin-right:-5px;">
+                          <svg id="status-high" class="icon-md status imgSev" enable-background="new 0 0 21.1 21.1" version="1.1" viewBox="0 0 21.1 21.1" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                          <path class="st13" d="m12.6 15.9l-0.9 0.9-2.8-2.8-2.8 2.8-0.9-0.9 2.8-2.8-2.8-2.8 0.9-0.9 2.8 2.8 2.8-2.8 0.9 0.9-2.8 2.8 2.8 2.8zm-0.2-10.8h-7.1l-4.4 4.9v6.2l4.4 4.9h7.1l4.4-4.9v-6.2l-4.4-4.9z" />
+                </svg>
+                        </a>
+                        <a class="tooltip1" data-toggle="tooltip" data-placement="bottom" title="Status: Medium" *ngIf="severity.Severity=='Medium'" style="margin-right:-5px;">
+                          <svg id="status-medium" class="icon-md status imgSev" enable-background="new 0 0 21.2 21.2" version="1.1" viewBox="0 0 21.2 21.2" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                          <path class="st14" d="m18 19.3l-7.9-13.7c-0.4-0.8-1.5-0.8-2 0l-7.9 13.7c-0.5 0.7 0.1 1.7 0.9 1.7h15.9c0.9 0 1.4-1 1-1.7zm-9.2-9.5c0.5-0.1 1 0.1 1.2 0.6 0.1 0.2 0.1 0.3 0.1 0.5 0 0.5-0.1 1-0.1 1.5 0 0.8-0.1 1.6-0.1 2.3v0.7c0 0.4-0.3 0.7-0.8 0.7-0.4 0-0.7-0.3-0.8-0.7-0.1-1.2-0.1-2.4-0.2-3.6 0-0.3 0-0.7-0.1-1 0-0.5 0.4-0.9 0.8-1zm0.3 9.1c-0.6 0-1-0.5-1-1 0-0.6 0.5-1 1-1s1 0.5 1 1-0.5 1-1 1z" />
+
+
+
+
+
+
+
+					                  </svg>
+                        </a>
+                        <a class="tooltip1" data-toggle="tooltip" data-placement="bottom" title="Status: Low" *ngIf="severity.Severity=='Low'" style="margin-right:-5px;">
+                          <svg id="status-low" class="icon-md status imgSev" enable-background="new 0 0 21 21" version="1.1" viewBox="0 0 21 21" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                          <path class="st15" d="m8 4.9c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm-1.1 11.7l-3.2-3.2 1.1-1.1 2.1 2.1 5.1-5.1 1.1 1.1-6.2 6.2z" />
+
+
+
+
+
+
+
+					                  </svg>
+                        </a>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

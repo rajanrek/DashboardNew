@@ -1,0 +1,22 @@
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)"
+             size="default"
+             color="#fff"
+             type="line-spin-fade">
+</ngx-spinner>
+<div class="compareBackground">
+  <workspace-menubar></workspace-menubar>
+  <div class="animated fadeIn portfolio">
+    <div style="display:block; width:100%;">
+      <!--<div id="map1d"></div>-->
+      <div id="map1" style="height:99.5vh;width:49.5%;position:relative;float:left;">
+        <div *ngIf="isLeftTileUploaded" class="noData">2D data not uploaded yet!</div>
+        <h5>{{surveyName1}}</h5>
+      </div>
+      <div id="map2" style="height:99.5vh;width:49.5%;position:relative;float:right;">
+        <div *ngIf="isRightTileUploaded" class="noData">2D data not uploaded yet!</div>
+        <h5>{{surveyName2}}</h5>
+      </div>
+    </div>
+  </div>
+  <workspace-comparepanel [surveydropdown]="projectSurveys"  [showTag]="false" [survey1]="leftSurvey" [survey2]="rightSurvey" (sendDatatoCompare)="recieveCompareData($event)"></workspace-comparepanel>
+</div>

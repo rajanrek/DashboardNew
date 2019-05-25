@@ -1,0 +1,140 @@
+<div class="animated fadeIn">
+  <div class="row">
+    <div class="col-sm-6 col-lg-3">
+      <a href="#/project">
+        <div class="card text-white bg-primary">
+          <div class="card-body pb-0">
+            <div class="btn-group float-right" dropdown>
+            </div>
+            <div class="text-value">{{totalFlights}}</div>
+            <div>Survey Completed</div>
+          </div>
+          <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
+            <canvas baseChart class="chart"
+            [datasets]="lineChart1Data"
+            [labels]="lineChart1Labels"
+            [options]="lineChart1Options"
+            [colors]="lineChart1Colours"
+            [legend]="lineChart1Legend"
+            [chartType]="lineChart1Type"></canvas>
+          </div>
+        </div>
+      </a>
+    </div><!--/.col-->
+    <div class="col-sm-6 col-lg-3">
+      <a href="#/project">
+        <div class="card text-white bg-info">
+          <div class="card-body pb-0">
+            <button type="button" class="btn btn-transparent p-0 float-right">
+              <i class="icon-location-pin"></i>
+            </button>
+            <div class="text-value">{{projCount}}</div>
+            <div>Project Completed</div>
+          </div>
+          <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
+            <canvas baseChart class="chart"
+            [datasets]="lineChart2Data"
+            [labels]="lineChart2Labels"
+            [options]="lineChart2Options"
+            [colors]="lineChart2Colours"
+            [legend]="lineChart2Legend"
+            [chartType]="lineChart2Type"></canvas>
+          </div>
+        </div>
+      </a>
+    </div><!--/.col-->
+    <div class="col-sm-6 col-lg-3">
+      <a href="#/project">
+        <div class="card text-white bg-warning">
+          <div class="card-body pb-0">
+            <div class="text-value">{{totalLocations}}</div>
+            <div>Project Location</div>
+          </div>
+          <div class="chart-wrapper mt-3" style="height:70px;">
+            <canvas baseChart class="chart"
+            [datasets]="lineChart3Data"
+            [labels]="lineChart3Labels"
+            [options]="lineChart3Options"
+            [colors]="lineChart3Colours"
+            [legend]="lineChart3Legend"
+            [chartType]="lineChart3Type"></canvas>
+          </div>
+        </div>
+      </a>
+    </div><!--/.col-->
+    <div class="col-sm-6 col-lg-3">
+      <a href="#/liveUAV">
+        <div class="card text-white bg-danger">
+          <div class="card-body pb-0">
+            <div class="text-value">Online </div>
+            <div>Live UAV</div>
+          </div>
+          <div class="chart-wrapper mt-3 mx-3" style="height:70px;">
+            <canvas baseChart class="chart"
+            [datasets]="barChart1Data"
+            [labels]="barChart1Labels"
+            [options]="barChart1Options"
+            [colors]="barChart1Colours"
+            [legend]="barChart1Legend"
+            [chartType]="barChart1Type"></canvas>
+          </div>
+        </div>
+      </a>
+    </div><!--/.col-->
+  </div><!--/.row-->
+  <div class="row">
+    <div class="col-md-12">
+      <div style="display:block; width:100%;">
+        <div id="map" style="height:89.5vh;width:100%;position:relative;"></div>
+      </div>
+      <!--<div class="google_map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14009.273371495448!2d77.35247233274096!3d28.62021961738083!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5456ef36d9f%3A0x3b7191b1286136c8!2sSector+62%2C+Noida%2C+Uttar+Pradesh!5e0!3m2!1sen!2sin!4v1539584790225" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>-->
+    </div>    
+  </div>
+    <!--<div class="animated fadeIn portfolio">
+      <div class="row">
+          <div class="col-md-12"><h2 class="title">Recent Surveys</h2></div>
+        <div class="col-sm-6 col-md-3">
+      <a href="#/workspace">
+          <div class="card">
+            <div class="card-body">
+        <img src="assets/img/survey1.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="card-footer">Survey 1</div>
+          </div>
+        </a>
+        </div>
+      <div class="col-sm-6 col-md-3">
+          <div class="card">
+            <div class="card-body">
+        <img src="assets/img/survey1.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="card-footer">Survey 2</div>
+          </div>
+        </div>
+      <div class="col-sm-6 col-md-3">
+          <div class="card">
+            <div class="card-body">
+        <img src="assets/img/survey1.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="card-footer">Survey 3</div>
+          </div>
+        </div>
+      <div class="col-sm-6 col-md-3">
+          <div class="card">
+            <div class="card-body">
+        <img src="assets/img/survey1.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet</p>
+            </div>
+            <div class="card-footer">Survey 4</div>
+          </div>
+        </div>
+        
+      
+      </div>
+    </div>-->
+</div>

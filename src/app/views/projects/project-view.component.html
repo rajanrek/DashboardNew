@@ -1,0 +1,51 @@
+<div class="page-header">
+        <h2>View Project</h2>
+    </div>
+    <div class="row">
+    <div class="col-md-4">
+            <fieldset class="form-group view-inner">
+                <label class="control-label" >Name</label>
+                <span>{{projects.Name}}</span>
+            </fieldset>
+        </div>
+        <div class="col-md-4">                                
+                <fieldset class="form-group view-inner">
+                    <label class="control-label" for="pilot">Client</label>
+                    <span>{{projects.Clients[0].Name}}</span>
+                </fieldset>
+            </div>
+            <div class="col-md-4">
+                    <fieldset class="form-group view-inner">
+                        <label class="control-label" for="date">Revenue Amount</label>
+                        <span>{{projects.RevenueAmount}}</span>
+                    </fieldset>
+                </div>
+                <div class="col-md-4">
+                        <fieldset class="form-group view-inner">
+                            <label class="control-label" for="serial">Currency</label>
+                            <span>{{projects.Currency}}</span>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-4">
+                            <fieldset class="form-group view-inner">
+                                <label class="control-label" name="organization">Organization</label>
+                                <span *ngFor="let pro of projects.OrganizationLookup" >{{pro.Name}}</span>
+                            </fieldset>
+                        </div>
+                        <div class="col-md-4">
+                                <fieldset class="form-group view-inner">
+                                    <label class="control-label" for="date">Status</label>
+                                    <span></span>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-12">
+                                    <fieldset class="form-group view-inner">
+                                        <label class="control-label" for="notes">Notes</label>
+                                        <span>{{projects.Notes}}</span>
+                                    </fieldset>
+                                </div>                 
+    </div>
+    <div class="col-md-12">
+            <button class="btn btn-primary btn-lg" routerLink="/projectList">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> Back
+            </button>

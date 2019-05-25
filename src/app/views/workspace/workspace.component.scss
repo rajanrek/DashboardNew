@@ -1,0 +1,129 @@
+.left_side_bar {
+    background: #fafafa;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    left: 0;
+    width: 300px;
+    bottom: 0;
+    box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.05);
+    transform: translate(0);
+    transition: all .4s ease;
+    padding: 0;
+}
+.side-bar-hide.left_side_bar {
+    transform: translate3d(-300px, 0, 0);
+}
+//new added
+button.active{
+    
+    background-color: #44a2d2;
+    // border: 1px solid #d3d5d6;
+    border-radius: 12px;
+    width: 120px;
+    height: 43px;
+    margin-top: 5px;
+}
+#btn.active1{
+    
+    background-color: #44a2d2;
+    // border: 1px solid #d3d5d6;
+    border-radius: 12px;
+    width: 120px;
+    height: 43px;
+    margin-top: 5px;
+}
+button:hover{
+    background-color: #44a2d2;
+    cursor: pointer;
+}
+
+button {
+    border: 1px solid #d3d5d6;
+    border-radius: 12px;
+    width: 120px;
+    background-color: #c7d4da;
+    height: 43px;
+    margin-top: 5px;
+}
+//..........................//
+button.btn.ws_btn {
+    background: #44a2d2;
+    color: #fff;
+    font-size: 20px;
+    padding: 13px 5px;
+    border-radius: 0 7px 7px 0;
+    position: absolute;
+    right: -26px;
+    top: 50%;
+    margin-top: -29px;
+    box-shadow: none;
+    width: 25px;
+    height: 58px;
+    line-height: 1;
+    text-align: left;
+}
+button.btn.ws_btn::before {
+    content: "\f0d9";
+    font-family: fontawesome;
+    font-size: 25px;
+}
+.side-bar-hide button.btn.ws_btn::before {
+    content: "\f0da";
+}
+.sb_top {
+    background: #44a2d2;
+    color: #fff;
+    padding: 12px;
+    display: flex;
+}
+.sb_top a {
+    color: #fff;
+}
+.sb_top a:first-child {
+    flex-grow: 1;
+}
+.left_side_bar .title {
+    font-size: 15px;
+    padding: 12px 14px;
+    font-weight: 500;
+    border-bottom: 1px solid #ddd;
+}
+.ws_dt_1 ul {
+    padding: 10px 10px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-bottom: 1px solid #ddd;
+}
+.ws_dt_1 ul li {
+    width: 44%;
+    padding: 7px 0;
+}
+.ws_dt_1 ul li a {
+    background: #cfd8dc;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 5px;
+    color: #333;
+    border-radius: 10px;
+}
+.ws_dt_1 ul li a:hover {
+    text-decoration:none;
+    background: #44a2d2;
+    color: #fff;
+}
+.ws_dt_2 p {
+    padding: 0 15px;
+}
+
+a.disabled {
+  color: gray;
+  cursor: not-allowed;
+}
+#dwnld{
+    color:#333;
+}

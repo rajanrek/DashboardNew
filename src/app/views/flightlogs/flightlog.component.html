@@ -1,0 +1,176 @@
+<div class="row">
+    <div class="container das-middle-sec edit-view panel">
+      <form role="form">
+        <div class="container-fluid padding-10">
+          <div class="col-md-12">
+            <div class="page-header">
+              <h3>
+                Flight Details
+              </h3>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-4">
+                <fieldset class="form-group">
+                  <label class="control-label" name="name">Mission</label>
+                  <select class="form-control">
+                 <option *ngFor="let mission of flights.Missions" name="Mission" [value]="mission.MissionId">{{mission.Name}}</option>
+                  </select>
+                </fieldset>
+              </div>
+              <div class="col-md-4">
+                <fieldset class="form-group">
+                  <label class="control-label" name="pilot">Pilot</label>
+                  <input type="text" name="PilotName" [(ngModel)]="flights.PilotName" class="form-control">
+                </fieldset>
+              </div>
+              <div class="col-md-4">
+                <fieldset class="form-group">
+                  <label class="control-label" name="drone">For Drone</label>
+                  <input type="text" name="DroneName" [(ngModel)]="flights.DroneName" class="form-control">
+                </fieldset>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <fieldset class="form-group">
+                  <label class="control-label" name="project">Project</label>
+                  <input type="text" name="Project" [(ngModel)]="flights.Project" class="form-control">
+                </fieldset>
+              </div>
+              <div class="col-md-4">
+                <fieldset class="form-group">
+                  <label class="control-label" for="location">Location</label>
+                  <input type="text" name="Location" [(ngModel)]="flights.Location" class="form-control">
+                </fieldset>
+              </div>
+              <div class="col-md-4">
+                <fieldset class="form-group">
+                  <label class="control-label" name="date">Flight Date</label>
+                  <input id="flightDate" name="flightDate" [(ngModel)]="flights.FlightDate" type="date" class="form-control" placeholder="">
+                </fieldset>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <fieldset class="form-group">
+                  <label class="control-label" name="startdate">Flight Start Time</label>
+                  <input type="text" class="form-control" ref="startdatetime">
+                </fieldset>
+              </div>
+              <div class="col-md-4">
+                <fieldset class="form-group">
+                  <label class="control-label" name="enddate">Flight End Time</label>
+                  <input type="text" name="Starttime"  class="form-control" ref="enddatetime">
+                </fieldset>
+              </div>
+              <div class="col-md-4">
+                <fieldset class="form-group">
+                  <label class="control-label" name="duration">Duration (minutes)</label>
+                  <input type="number" name="Duration" [(ngModel)]="flights.Duration" class="form-control" placeholder="Duration">
+                </fieldset>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <fieldset class="form-group">
+                  <label class="control-label" name="type">Type</label>
+                  <input type="text" name="Type" [(ngModel)]="flights.Type" class="form-control">
+                </fieldset>
+              </div>
+              <div class="col-md-4">
+                <fieldset class="form-group">
+                  <label class="control-label" for="landings">Number of Landings</label>
+                  <input type="number" class="form-control" placeholder="">
+                </fieldset>
+              </div>
+              <div class="col-md-4">
+                <fieldset class="form-group">
+                  <label class="control-label" for="distance">Distance Travelled</label>
+                  <input type="text" class="form-control" placeholder="">
+                </fieldset>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <fieldset class="form-group">
+                  <label class="control-label" for="maxalt">Max Altitude</label>
+                  <input type="number" class="form-control" placeholder="">
+                </fieldset>
+              </div>
+              <div class="col-md-4">
+                <fieldset class="form-group">
+                  <label class="control-label" name="hwversion">Organization</label>
+                  <select class="form-control">
+                    <option *ngFor="let org of flights.OrganizationLookup">{{org.Name}}</option>
+                  </select>
+                </fieldset>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <fieldset class="form-group">
+                  <label class="control-label" for="notes">Mission Notes</label>
+                  <textarea class="form-control" id="notes" rows="3"></textarea>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+
+  
+          <div class="col-md-12">
+            <h3 class="text-primary">Weather Information</h3>
+            <div class="row">
+              <div class="col-md-4">
+                <fieldset class="form-group">
+                  <label class="control-label" for="cloudcover">Cloud Cover (%)</label>
+                  <input type="number" step="0.1" class="form-control" placeholder="">
+                </fieldset>
+              </div>
+              <div class="col-md-4">
+                <fieldset class="form-group">
+                  <label class="control-label" for="temperature"></label>
+                  <input type="number" step="0.1" class="form-control" placeholder="">
+                </fieldset>
+              </div>
+              <div class="col-md-4">
+                <fieldset class="form-group">
+                  <label class="control-label" for="windspeed">Wind Speed (m/s)</label>
+                  <input type="number" step="0.1" class="form-control" placeholder="">
+                </fieldset>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <fieldset class="form-group">
+                  <label class="control-label" for="humidity">Humidity (%)</label>
+                  <input type="number" class="form-control" placeholder="">
+                </fieldset>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <fieldset class="form-group">
+                  <label class="control-label" for="metar">Notes</label>
+                  <textarea class="form-control" id="notes" rows="3"></textarea>
+                </fieldset>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-md-12">
+            <button class="btn btn-primary btn-lg" click.delegate="saveItem()">
+              <i class="fa fa-check" aria-hidden="true"></i> Save
+            </button>
+            &nbsp;
+            <button class="btn btn-primary btn-lg" routerLink="/flightlogs">
+              <i class="fa fa-times" aria-hidden="true"></i> Cancel
+            </button>
+          </div>
+        </div>
+      </form>
+
+    </div>
+  </div>

@@ -1,0 +1,12 @@
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)"
+             size="default"
+             color="#fff"
+             type="line-spin-fade">
+</ngx-spinner>
+<workspace-menubar></workspace-menubar>
+<div class="animated fadeIn portfolio">
+  <div *ngIf="processTask && processTask.ModelId==null" class="noData">3D data not uploaded yet !.</div>
+  <div>
+    <iframe id="3dViewer" width="100%" height="750px" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe>
+  </div>
+</div>

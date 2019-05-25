@@ -1,0 +1,53 @@
+<div id="mapid" style="height: 70%"></div>
+  <div id="waypoints">
+    <div>
+      <h3>Waypoints</h3>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3">
+            WP Radius: <input type="number" min="10" max="1000">
+          </div>
+          <div class="col-md-3">
+            Default Altitude: <input type="number"  min="50" max="500">
+          </div>
+        </div>
+        <div class="row">
+          <div>
+            <table width="100%" cellpadding="2" cellspacing="2" border="1">
+              <tr>
+                <th>#</th>
+                <th>Command</th>
+                <th>Lat</th>
+                <th>Lng</th>
+                <th>Alt</th>
+                <th>Grad</th>
+                <th>Angle</th>
+                <th>Dist</th>
+                <th>AZ</th>
+                <th>Delete</th>
+              </tr>
+              <tr>
+                <td>wp.index</td>
+                <td>
+                  <select>
+                    <option></option>
+                  </select>
+                </td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Delete</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  <button class="btn btn-primary btn-lg " style="margin-top:50px" routerLink="/missions">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i> Back
+  </button>

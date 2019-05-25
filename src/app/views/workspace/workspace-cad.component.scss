@@ -1,0 +1,27 @@
+.container-fluid{
+    width: 70%;
+    height: 10%;;
+}
+
+#btnback{
+    margin-top: 84px;
+    float:right;
+    border-radius: 15px; 
+  
+}
+#btnback {
+  position: absolute;
+  top: -10%;
+  left: 58%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+//   background-color: #03A9F4;;
+//   color: white;
+  font-size: 16px;
+  padding: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}

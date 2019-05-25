@@ -1,0 +1,484 @@
+// Here you can add other styles
+header.app-header {
+  background: #44a2d2;
+  padding: 0 20px;
+}
+
+.navbar-nav .nav-link {
+  color: rgba(255,255,255,.7);
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
+  color: #fff;
+}
+
+.app-header .navbar-toggler-icon {
+  background-image: url(/assets/img/menu.svg) !important;
+  background-size: 18px;
+}
+
+.app-header .navbar-toggler-icon:hover {
+  opacity: .8;
+}
+
+button.navbar-toggler {
+  outline: none;
+}
+
+.sidebar {
+  background: #fff;
+  color: #444;
+}
+
+.sidebar .nav-link, .sidebar .nav-title, .sidebar .nav-dropdown.open .nav-link {
+  color: #444;
+}
+
+.sidebar .nav-link.active, .sidebar .nav-link:hover, .sidebar .nav-dropdown.open {
+  color: #444;
+  background: #f0f0f0;
+}
+
+.sidebar .nav-link:hover .nav-icon {
+  color: #20a8d8;
+}
+
+.sidebar .nav-dropdown-toggle::before {
+  background-image: url(/assets/img/arrow.svg) !important;
+}
+
+.sidebar .nav-dropdown.open > .nav-dropdown-items {
+  background: #f8f8f8;
+  padding-left: 10px;
+}
+
+ul.nav.navbar-nav.ml-auto + .navbar-toggler.d-md-down-none {
+  display: none;
+}
+
+.card-body p {
+  margin: 5px 0 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.portfolio .col-sm-6.col-md-3 {
+  padding: 0 10px;
+}
+
+.card-body {
+  padding: 12px;
+}
+
+.card-body img {
+  width: 100%;
+}
+
+.google_map {
+  border: 1px solid #c8ced3;
+  border-radius: 4px;
+  padding: 12px;
+  background: #fff;
+  margin-bottom: 25px;
+}
+
+.animated a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.card-body .portfolio-bt {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.card-body:hover .portfolio-bt {
+  display: block;
+}
+
+.card-body {
+  position: relative;
+}
+
+.card-body .portfolio-bt p {
+  position: absolute;
+  bottom: 18px;
+  left: 15px;
+  right: 10px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.sb_top i.fa {
+  font-size: 18px;
+  position: relative;
+  top: 1px;
+}
+
+.sb_top a:hover {
+  text-decoration: none;
+  color: #c4e8fa !important;
+}
+
+footer.app-footer {
+  justify-content: center;
+}
+
+.profile_page {
+  border: 1px solid #c8ced3;
+  border-radius: 4px;
+  padding: 15px;
+  background: #fff;
+  margin-bottom: 25px;
+}
+
+.pr_top-sec {
+  width: 100%;
+}
+
+.pr_top-sec h2.pull-left {
+  margin-bottom: 30px;
+}
+
+form.add-form.view {
+  width: 100%;
+}
+
+fieldset.form-group.view-inner {
+  background: #f0f0f0;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+fieldset.form-group.view-inner label.control-label {
+  display: block;
+  font-weight: bold;
+}
+
+.change-password i.fa.fa-pencil {
+  padding-right: 5px;
+}
+
+a.btn.live_st {
+  float: right;
+  background: #44a2d2;
+  color: #fff;
+  padding: 5px 10px;
+  line-height: 1;
+  font-size: 12px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.inp-top-actions img {
+  width: 30px;
+}
+
+
+@media (max-width: 767px) {
+  header.app-header button.navbar-toggler.d-lg-none:last-child {
+    display: none;
+  }
+
+  header.app-header.navbar {
+    padding: 0 5px 0 0;
+  }
+
+  .main .container-fluid {
+    padding: 0 15px;
+  }
+
+  ol.breadcrumb {
+    margin-bottom: 15px;
+  }
+
+  .card {
+    margin-bottom: 15px;
+    margin-top: 12px;
+  }
+
+  h2, .h2 {
+    font-size: 22px;
+  }
+
+  h2.insp-title {
+    margin: 0 !important;
+  }
+
+  .inp-top-status {
+    max-width: 100% !important;
+    text-align: left !important;
+  }
+
+  div#map canvas.ol-unselectable {
+    height: 200px !important;
+  }
+
+  div.inp-img-thum.imgMargin {
+    max-width: unset !important;
+    width: 33%;
+    margin: 0;
+    padding: 0 5px 10px;
+  }
+
+  div.inp-bt-actions-wrap {
+    max-width: 100% !important;
+  }
+
+  .inp-map-left-inner {
+    width: 100% !important;
+  }
+
+  .inp-img-thum-main {
+    max-height: 260px !important;
+  }
+
+  .status {
+    width: 38px !important;
+    height: 38px !important;
+    line-height: 38px !important;
+  }
+
+  .inspection-details,
+  .inp-map-left-inner .panel.panel-default {
+    position: static !important;
+    max-width: 100%;
+    padding: 10px 0 0 !important;
+  }
+
+  .inspection.img-nav {
+    top: 134px !important;
+    font-size: 22px !important;
+  }
+
+  .inspection.img-nav-btn-right {
+    right: 10px !important;
+  }
+}
+.compareBackground {
+  background-color: white !important;
+}
+.noData {
+  border: 2px solid red;
+  width: 17%;
+  text-align: center;
+  margin-top: 20%;
+  margin-left: 42%;
+  padding: 1%;
+  border-radius: 7px;
+  color: red;
+}
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 49.5%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #111;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: #111;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.textColor{
+  color:white;
+}
+.leaflet-popup-close-button{
+  display: none;
+}
+.leaflet-control-layers-toggle {
+	background-image: url(/assets/layerc.png);
+	width: 25px;
+    height: 25px;
+    background-repeat: round;
+    background-position: 0px -100px;
+    box-shadow: 0 1px 7px rgba(0,0,0,0.4);
+		-webkit-border-radius: 8px;
+	        border-radius: 8px;
+    }
+
+.onoffswitch {
+  position: relative;
+  width: 90px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+  display: none;
+}
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999999;
+  border-radius: 20px;
+}
+
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+  content: "ON";
+  padding-left: 10px;
+  background-color: #34A7C1;
+  color: #FFFFFF;
+}
+
+.onoffswitch-inner:after {
+  content: "OFF";
+  padding-right: 10px;
+  background-color: #EEEEEE;
+  color: #999999;
+  text-align: right;
+}
+
+.onoffswitch-switch {
+  display: block;
+  width: 18px;
+  margin: 6px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 56px;
+  border: 2px solid #999999;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+/*second radio-button css*/
+
+.onoffswitch2 {
+  position: relative;
+  width: 90px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.onoffswitch2-checkbox {
+  display: none;
+}
+
+.onoffswitch2-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999999;
+  border-radius: 20px;
+}
+
+.onoffswitch2-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch2-inner:before, .onoffswitch2-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.onoffswitch2-inner:before {
+  content: "ON";
+  padding-left: 10px;
+  background-color: #34A7C1;
+  color: #FFFFFF;
+}
+
+.onoffswitch2-inner:after {
+  content: "OFF";
+  padding-right: 10px;
+  background-color: #EEEEEE;
+  color: #999999;
+  text-align: right;
+}
+
+.onoffswitch2-switch {
+  display: block;
+  width: 18px;
+  margin: 6px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 56px;
+  border: 2px solid #999999;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch2-checkbox:checked + .onoffswitch2-label .onoffswitch2-inner {
+  margin-left: 0;
+}
+
+.onoffswitch2-checkbox:checked + .onoffswitch2-label .onoffswitch2-switch {
+  right: 0px;
+}

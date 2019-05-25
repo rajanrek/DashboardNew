@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="Road" id="Road">
+	<SimpleField name="altitudeMode" type="string"></SimpleField>
+	<SimpleField name="tessellate" type="int"></SimpleField>
+	<SimpleField name="Id" type="string"></SimpleField>
+	<SimpleField name="FID" type="string"></SimpleField>
+	<SimpleField name="Field_1" type="string"></SimpleField>
+</Schema>
+<Folder><name>Road</name>
+  <Placemark>
+	<name>0</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#Road">
+		<SimpleData name="altitudeMode">clampToGround</SimpleData>
+		<SimpleData name="tessellate">1</SimpleData>
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="FID">0</SimpleData>
+		<SimpleData name="Field_1">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><LineString><coordinates>83.0131788446257,25.3111082947049 83.0130975632978,25.3111029562354 83.0130004606749,25.3110942511695 83.0128924785507,25.311095009549 83.0127546076612,25.3110997587182 83.0125956000162,25.3111133947953 83.0125443376998,25.3111119452532 83.0125222944522,25.3111136793405 83.0124887729901,25.3111363495915 83.012417517195,25.3111652673679 83.0123515058017,25.3111776332671 83.0122956805666,25.3111862773917 83.0122138715254,25.3111967093422 83.012149388947,25.3112061881504 83.0121242287641,25.3112101143319 83.0120852733197,25.3112378744109 83.0120416484089,25.3112692808912 83.0120181946287,25.3112810656096 83.0119899293488,25.3112879002894 83.0118719383394,25.3113031252134 83.0116796167632,25.3113043175268 83.0116006522879,25.3112960804795 83.0115177709577,25.3112893299155 83.0113287201218,25.3112976424477 83.0112153629604,25.3113070713495</coordinates></LineString></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>0</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#Road">
+		<SimpleData name="altitudeMode">clampToGround</SimpleData>
+		<SimpleData name="tessellate">1</SimpleData>
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="FID">1</SimpleData>
+		<SimpleData name="Field_1">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><LineString><coordinates>83.0132466845241,25.3107297557959 83.0131445865989,25.3107526464443 83.0131320598719,25.3107578332814 83.0131251327615,25.3107679593489 83.0131228632024,25.3107737226043 83.0131175359814,25.3107852598806 83.0131099036694,25.3108004113022 83.0131052698022,25.3108062068535 83.0131045764462,25.3108119485781 83.0131008728001,25.3108263298028 83.0130955811048,25.3108400161882 83.0130993418802,25.3110198142672 83.0130975632978,25.3111029562354</coordinates></LineString></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>0</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#Road">
+		<SimpleData name="altitudeMode">clampToGround</SimpleData>
+		<SimpleData name="tessellate">1</SimpleData>
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="FID">2</SimpleData>
+		<SimpleData name="Field_1">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><LineString><coordinates>83.0121104644312,25.310854185884 83.0121126443495,25.3108906992512 83.0121170583675,25.3109193002642 83.0121253687729,25.311088288339 83.012126801136,25.3111749691461 83.0121242287641,25.3112101143319</coordinates></LineString></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>0</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#Road">
+		<SimpleData name="altitudeMode">clampToGround</SimpleData>
+		<SimpleData name="tessellate">1</SimpleData>
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="FID">3</SimpleData>
+		<SimpleData name="Field_1">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><LineString><coordinates>83.0112153629604,25.3113070713495 83.0112106321654,25.3113056960463 83.0112061800086,25.3113036946532 83.0112021061214,25.311301111958 83.0111985016704,25.3112980057568 83.0111954473168,25.3112944455612 83.0111850861359,25.3111921228578 83.0111670831186,25.3110089362987 83.0111361227807,25.310757139458</coordinates></LineString></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>0</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#Road">
+		<SimpleData name="altitudeMode">clampToGround</SimpleData>
+		<SimpleData name="tessellate">1</SimpleData>
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="FID">4</SimpleData>
+		<SimpleData name="Field_1">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><LineString><coordinates>83.0116383222227,25.3109996385449 83.0116592951938,25.3113021977204</coordinates></LineString></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>0</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#Road">
+		<SimpleData name="altitudeMode">clampToGround</SimpleData>
+		<SimpleData name="tessellate">1</SimpleData>
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="FID">5</SimpleData>
+		<SimpleData name="Field_1">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><LineString><coordinates>83.0118245582924,25.3111723757405 83.0118348758997,25.3113033550046</coordinates></LineString></MultiGeometry>
+  </Placemark>
+  <Placemark>
+	<name>0</name>
+	<Style><LineStyle><color>ff0000ff</color></LineStyle><PolyStyle><fill>0</fill></PolyStyle></Style>
+	<ExtendedData><SchemaData schemaUrl="#Road">
+		<SimpleData name="altitudeMode">clampToGround</SimpleData>
+		<SimpleData name="tessellate">1</SimpleData>
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="FID">6</SimpleData>
+		<SimpleData name="Field_1">0</SimpleData>
+	</SchemaData></ExtendedData>
+      <MultiGeometry><LineString><coordinates>83.0118460698478,25.3110719961036 83.0116443376249,25.3110864178624</coordinates></LineString></MultiGeometry>
+  </Placemark>
+</Folder>
+</Document></kml>

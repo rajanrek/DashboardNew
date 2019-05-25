@@ -1,0 +1,197 @@
+.selectedAnnotationStyle {
+  -webkit-box-shadow: 0 3px 12px 0 rgba(0,0,0,.16);
+  box-shadow: 0 3px 12px 0 rgba(0,0,0,.16);
+  border-radius: 3px;
+  display: inline-block;
+  padding: 7px 11px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  background-color: #44a2d2;
+  color: white;
+}
+
+.closeStyle {
+  font-size: 22px;
+  color: red;
+  cursor: pointer;
+}
+
+.closeSidePanel {
+  cursor: pointer;
+}
+
+.panel.panel-default {
+  right: 0;
+  top: 55px;
+  font-size: 13px;
+  position: absolute;
+  width: 315px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.annotation-inner {
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.annotation-inner > .annotation-ul {
+  width: 137px;
+  float: left;
+  background: #e5e5e5;
+  margin-right: 12px;
+  border-right: 8px solid #eeee;
+  padding: 5px 0;
+  height: 120px;
+  position: relative;
+}
+
+.annotation-inner > .annotation-ul.ant-bx-2 {
+  margin-right: 0 !important;
+}
+
+ul.annotation-ul-inner {
+  height: 111px;
+  overflow-y: auto;
+  margin-top: 2px;
+}
+
+.annotation-ul.ant-bx-1 li a:hover, .annotation-ul.ant-bx-1 li a.ant-active {
+  color: #44a2d2;
+}
+
+.ant-close {
+  position: absolute;
+  top: -15px;
+  right: -11px;
+  font-size: 18px;
+}
+
+.ant-new-add {
+  width: 114px;
+  float: left;
+  background: #e5e5e5;
+  margin-right: 12px;
+  border: 1px solid #36e4c6;
+  padding: 5px 5px;
+  height: 120px;
+  position: relative;
+}
+
+div.annotation-design-new {
+  padding: 0;
+}
+
+.panel.panel-default .panel-body .container {
+  padding-left: 0;
+}
+
+.panel.panel-default .panel-body {
+  padding: 0 10px;
+}
+
+.panel.panel-default .panel-body .container input#comment {
+  background: #fff
+}
+
+.annotation-design-new .inp-search-bx {
+  padding: 0;
+  max-width: 255px;
+  margin-bottom: 10px;
+}
+
+.inp-search-bx input {
+  border: 1px solid #ddd;
+  height: 32px;
+  border-radius: 4px;
+  width: 100%;
+  color: #444;
+  padding: 5px 8px;
+}
+
+.inp-search-bx i.fa {
+  position: absolute;
+  top: 11px;
+  left: 235px;
+  color: #777;
+}
+
+.annotation-inner > .annotation-ul li a {
+  display: inline-block;
+  padding: 1px 10px;
+  width: 100%;
+  margin: 1px 0;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.closeStyle {
+  font-size: 22px;
+  color: red;
+  cursor: pointer;
+  margin-left: 11px;
+}
+
+.inp-map-left-inner .panel.panel-default label {
+  margin-right: 11px;
+  font-weight: bold;
+}
+
+ul {
+  padding: 0;
+}
+
+.panel-heading {
+  font-size: 17px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.panel-body.annotation_details .row {
+  margin: 0;
+}
+
+.panel-body.annotation_details .col-md-12 {
+  padding: 0;
+}
+
+.panel-body.annotation_details label:first-child {
+  font-weight: 600;
+}
+
+label.radio-inline {
+  margin-right: 15px;
+}
+
+label.radio-inline span {
+  padding-left: 3px;
+  position: relative;
+  top: -2px;
+}
+
+.panel.panel-default {
+  border: 1px solid #eee;
+  padding: 10px 3px 0;
+}
+
+.panel-body.annotation_details .container {
+  padding: 0;
+}
+
+.panel.panel-default .panel-heading {
+  padding-right: 10px;
+  text-transform: capitalize;
+}
+
+a.ant-close {
+  color: #44a2d2;
+}
+
+.btn-primary {
+  background: #44a2d2;
+}

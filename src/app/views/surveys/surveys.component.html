@@ -1,0 +1,23 @@
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)"
+             size="default"
+             color="#fff"
+             type="line-spin-fade">
+</ngx-spinner>
+<div class="animated fadeIn portfolio">
+  <div class="row">
+    <div class="col-sm-6 col-md-3" *ngFor="let survey of surveysList;let i=index;">
+      <a (click)="otho(survey)" style="cursor:pointer;">
+        <div class="card">
+          <div class="card-body">
+            <img src="assets/img/survey1.jpg" alt="">
+            <p><b>Survey:</b> {{survey.MissionName}}</p>
+            <p><b>Date:</b> {{survey.StartTime | date :"shortDate"}}</p>
+          </div>
+          <!--<div class="card-footer">Survey{{i+1}}</div>-->
+        </div>
+      </a>
+    </div>
+    <!--/.col-->
+  </div>
+  <!--/.row-->
+</div>

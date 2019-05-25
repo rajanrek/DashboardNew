@@ -1,0 +1,45 @@
+
+<div class="profile_page">
+    <div class="row">
+        <div class="pr_top-sec">
+            <div class="col-md-12">
+                    <h2 class="pull-left">Manage Projects</h2>
+                    <div class="right-botton pull-right change-password">
+                        <button type="button" class="btn btn-primary btn-md" routerLink="/projectList/mission/{{0}}"><i class="fa fa-plus" aria-hidden="true"></i> Add New Projects</button>
+                    </div>
+            </div>
+            
+        </div>
+    </div>
+   </div>
+  <table>
+    <tbody style="display: contents;" >
+      <tr >
+      <div class="animated fadeIn portfolio">
+                  <div class="row">
+                      <div class="col-sm-6 col-md-4" *ngFor="let proj of projects;let i=index;">
+                    <div class="card">
+                        <div class="card-body" routerLink="/projectList/missions/{{proj.ProjectId}}">
+                          <!-- <img  routerLink="/projectList/projectview/{{proj.ProjectId}}" src="assets/img/project1.jpg" alt=""> -->
+                           <span class="projectlistS">{{proj.Name}}</span>
+                          <p><b>Organization:</b> {{proj.OrganizationName}}</p>
+                          <p><b>Date: </b> {{proj.DateCreated | date :"shortDate"}}</p>
+                          <p> 
+                              <a style="padding:4px; color: #44a2d2" title="Edit" routerLink="/projectList/project/{{proj.ProjectId}}">
+                              <i class="fa fa-pencil-square-o" aria-hidden="true" ></i> 
+                              </a>
+                              <a style="padding:4px; color: #44a2d2" title="Delete">
+                              <i class="fa fa-trash" aria-hidden="true"></i> 
+                              </a>
+                              <a  title="View" style="color: #44a2d2" routerLink="/projectList/projectview/{{proj.ProjectId}}">
+                              <i class="fa fa-eye" aria-hidden="true"></i>
+                              </a>
+                            </p>
+                        </div>
+                         </div>
+                      </div>
+                  </div>
+              </div>
+          </tr>
+      </tbody>
+  </table>

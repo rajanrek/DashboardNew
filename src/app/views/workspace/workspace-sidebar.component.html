@@ -1,0 +1,75 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    Annotation details
+    <i class="fa fa-close pull-right closeSidePanel" aria-hidden="true" (click)="closepanel()"></i>
+    <i class="fa fa-trash pull-right" aria-hidden="true" (click)="DeleteAnnotation()" style="cursor:pointer;"></i>
+  </div>
+  <div class="panel-body annotation_details">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!--div class="form-group" *ngIf="!currentannotation.annoName">
+            <label for="email">Type:</label>
+            <button type="button" class="btn btn-primary btn-md selectedMargin" (click)="selectAnnotation()">Select Annotation Type</button>
+          </div-->
+          <div class="form-group" *ngIf="currentannotation.annoName">
+            <div class="selectedAnnotationStyle">{{currentannotation.annoName}}</div>
+            <i class="fa fa-close closeStyle" (click)="close()"></i>
+          </div>
+          <div class="form-group">
+            <!-- <label for="comment">Severity:</label><br> -->
+            <label class="radio-inline" *ngFor="let option of severityOptions">
+              <input type="radio" [checked]="currentannotation.Severity==option.Severity" (change)="onSelectionChange(option)" name="radiogroup">
+              <span style="border-bottom:3px solid" {{option.color}}>{{option.Severity}}</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------New Annotation design----->
+    <div class="col-md-12 annotation-design-new">
+      <!--div class="inp-search-bx"><input type="search"><i class="fa fa-search" aria-hidden="true"></i></div-->
+      <div class="annotation-inner">
+        <div class="annotation-ul ant-bx-1">
+          <ul class="annotation-ul-inner">
+            <li *ngFor="let parent of parentData let i=index">
+              <a [class]="initialValue==i ? 'ant-active' : '' " (click)="changeInitialValue(i)">{{parent.Name}}</a>
+            </li>
+          </ul>
+          <a  class="ant-close"><i class="fa fa-plus-circle" aria-hidden="true" (click)="openaddPopup('root')"></i></a>
+        </div>
+        <div class="annotation-ul ant-bx-2">
+          <ul class="annotation-ul-inner">
+            <li *ngFor="let child of parentData[initialValue].childData"><a (click)="selectedAnnotation(child.Name,child.AnnotationTypeId)">{{child.Name}}</a></li>
+          </ul>
+          <a  class="ant-close"><i class="fa fa-plus-circle" aria-hidden="true" (click)="openaddPopup('child')"></i></a>
+        </div>
+        <div class="ant-new-add" *ngIf="addPopup">
+          <ul class="annotation-ul">
+            <div class="inp-add-input"><input type="text" [value]="newannotypeValue"><i class="fa fa-plus-circle" aria-hidden="true" (click)="addNewAnnoType()"></i></div>
+          </ul>
+          <a  class="ant-add"><i class="fa fa-plus-square-o" aria-hidden="true"></i></a>
+          <a  class="ant-rem"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+          <a  class="ant-close"><i class="fa fa-times-circle" aria-hidden="true" (click)="closeaddPopup()"></i></a>
+        </div>
+
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="comment">Notes:</label>
+          <textarea class="form-control selectedMargin textarea" id="comment" [(ngModel)]="currentannotation.AnnotationData">                
+              </textarea>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <button type="button" class="btn btn-primary btnMargin" (click)="saveAnnotation()">Save Annotation</button>
+          <div class="form-group">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!------New Annotation design End ----->
+  </div>
+</div>
+<!--</div>-->

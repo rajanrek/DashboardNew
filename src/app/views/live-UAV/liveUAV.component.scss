@@ -1,0 +1,117 @@
+.liveUat {
+    display: inline-block;
+    width: 100%;
+}
+.live-streaming,.street-view {
+    float: left;
+    width: 50%;
+    height: 100vh;
+}
+.street-view {
+    background: #ddd;
+    position: relative;
+}
+.live-streaming {
+    background: rgba(68, 162, 210, 0.3);
+    position: relative;
+}
+a.ls_expand,a.sv_expand {
+    background: #fff;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    float: right;
+    text-align: center;
+    line-height: 35px;
+    font-size: 16px;
+}
+.liveUat h3 {
+    display: inline-block;
+}
+.live-streaming-block .live-streaming,
+.street-view-block .street-view {
+    width: 100%;
+}
+.live-streaming-block .street-view,
+.street-view-block .live-streaming {
+    display: none;
+}
+.liveUat-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0px;
+    height: 200px;
+	background: rgba(221, 221, 221, 0.5);
+    border: 1px solid #fff;
+	transform: translate3d(0, -200px, 0);
+	transition: all .4s ease;
+}
+.liveUat-top.show-tp {
+    transform: translate(0);
+}
+button.btn.tp-ar {
+    background: #44a2d2;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 0 0 7px 7px;
+    position: absolute;
+    left: 50%;
+    box-shadow: none;
+    width: 70px;
+    height: 25px;
+    line-height: 1;
+    text-align: center;
+    bottom: -25px;
+    margin-left: -35px;
+    padding: 0;
+}
+button.btn.tp-ar::before {
+    content: "\f0d7";
+    font-family: fontawesome;
+    font-size: 25px;
+}
+.show-tp button.btn.tp-ar::before {
+    content: "\f0d8";
+}
+.live-str-tp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #00000042;
+}
+.live-streaming {
+    border-right: 1px solid #666;
+}
+.live-str-tp h3 {
+    font-size: 17px;
+    padding: 6px 0 0 13px;
+    color: #000;
+}
+.liv_uav_top {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    background: #44a2d2;
+    z-index: 1;
+    padding: 6px 10px;
+    border-radius: 0 5px 5px 0;
+}
+.liv_uav_top>a {
+    color: #fff;
+}
+.liv_uav_top>a:first-child {
+    padding-right: 18px;
+}
+img.drone {
+    max-width: 50px;
+    margin-left: 20px;
+}
+.uav_ntw h3 {
+    display: block !important;
+    margin-top: 48px;
+    font-size: 20px;
+    padding-left: 20px;
+}

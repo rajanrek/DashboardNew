@@ -1,0 +1,58 @@
+<!--<div class="left_side_bar" id="left_side_bar">
+  <div class="sb_top">
+    <a href="#/project">  Back</a>
+    <a href="#/dashboard">Dashboard</a>
+  </div>
+  <div class="ws_dt_1">
+    <div class="title">Workspace</div>
+    <ul>
+      <li><a href="#/workspace/2d/{{gufi}}"> 2D Map </a></li>
+      <li><a href="#/workspace/sketch/{{gufi}}"> 3D Map </a></li>
+      <li><a href="#"> Point Cloud </a></li>
+      <li><a href="#/workspace/inspection/{{gufi}}"> Inspection </a></li>
+      <li><a href="#"> Videos </a></li>
+      <li><a href="#"> CAD Drawing </a></li>
+      <li><a href="#/liveUAV"> Live UAV </a></li>
+      <li><a href="#"> Download </a></li>
+    </ul>
+  </div>
+  <div class="ws_dt_2">
+    <p>Annotation & Measurement </p>
+  </div>
+  <button class="btn ws_btn" (click)="myFunction()"><</button>
+</div>
+<div>
+</div>-->
+
+<div class="left_side_bar" id="left_side_bar">
+  <div class="sb_top">
+    <a  title="Back" (click)="goBack()"> <i class="fa fa-caret-left" aria-hidden="true"></i> Back</a>
+    <a href="#dashboard" title="Dashboard"><i class="fa fa-tachometer" aria-hidden="true"></i></a>
+  </div>
+  <div class="ws_dt_1">
+    <div appPdfrepo class="title">Workspace</div>
+    <ul>
+      <button  id="btn1" (click)="isFeatureActive('1')"  [class.disabled]="!isFeatureActive('1')" routerLinkActive="active" routerLink="/workspace/2d/{{gufi}}" > 2D </button>
+      <button  id="btn1" (click)="isFeatureActive('2')"  [class.disabled]="!isFeatureActive('2')" routerLinkActive="active" routerLink="/workspace/sketch/{{gufi}}">3D</button>
+      <li><a (click)="isFeatureActive('3')" [class.disabled]="!isFeatureActive('3')" > Point Cloud </a></li>
+      <li><a (click)="isFeatureActive('4')" [class.disabled]="!isFeatureActive('4')" routerLink="/workspace/inspection/{{gufi}}"> Inspection </a></li>
+      <li><a (click)="isFeatureActive('5')" [class.disabled]="!isFeatureActive('5')" href="#"> DTM </a></li>
+      <li><a (click)="isFeatureActive('6')" [class.disabled]="!isFeatureActive('6')" href="#"> DSM </a></li>
+      <li><a (click)="isFeatureActive('7')" [class.disabled]="!isFeatureActive('7')" routerLink="/workspace/workspace-videos/{{gufi}}"> Videos </a></li>
+      <button id="btn8" routerLinkActive="active" routerLink="/workspace/cad/{{gufi}}" > CAD Drawing</button>
+      <li><a (click)="isFeatureActive('9')" [class.disabled]="!isFeatureActive('9')" routerLink="/workspace/2d-compare/{{gufi}}"> 2D Compare </a></li>
+      <li><a (click)="isFeatureActive('10')" [class.disabled]="!isFeatureActive('10')" routerLink="/workspace/3d-compare/{{gufi}}"> 3D Compare </a></li>
+      <li><a (click)="isFeatureActive('11')" [class.disabled]="!isFeatureActive('11')" routerLink="/workspace/video-compare/{{gufi}}"> Video Compare </a></li>
+      <li><a (click)="isFeatureActive('12')" [class.disabled]="!isFeatureActive('12')" routerLink="/workspace/image-compare/{{gufi}}"> Image Compare </a></li>
+      <li><a (click)="isFeatureActive('13')" [class.disabled]="!isFeatureActive('13')" routerLink="/liveUAV"> Live UAV </a></li>
+      
+      
+      <li><a id="dwnld" [ngClass]="{'active': isActive}" (click)="isActive = !isActive" (click)="onclickDownload()"> Download </a></li>
+    </ul>
+  </div>
+  <button class="btn ws_btn" (click)="myFunction()"> </button>
+  
+</div>
+
+
+

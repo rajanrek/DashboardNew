@@ -1,0 +1,52 @@
+<div class="profile_page">
+    <div class="row">
+        <div class="pr_top-sec">
+            <div class="col-md-12">
+                    <h2 class="pull-left">FlightLogs</h2>
+                    <div class="right-botton pull-right change-password">
+                        <button type="button" class="btn btn-primary btn-md" routerLink="/flightlogs/flightlog/{{0}}"><i class="fa fa-plus" aria-hidden="true"></i> Add Flight</button>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+
+  </div>
+  <table>
+  <tr   >
+  <th style="font-weight:600;">Mission</th>
+  <th style="font-weight:600;">Date</th>
+  <th style="font-weight:600;">Organization</th>
+  <th style="font-weight:600;">UAV</th>
+  <th style="font-weight:600;">Duration(minutes)</th>
+  <th style="font-weight:600;">Status</th>
+  <th style="font-weight:600;">Creation Date</th>
+  <th style="font-weight:600;">Action</th>
+  </tr>
+  <tbody >
+  <tr *ngFor="let flight of flights">
+  <th style="font-weight:400;">{{flight.MissionName}}</th>
+  <th style="font-weight:400;">{{flight.EndTimeText | date: 'short'}}</th>
+  <th style="font-weight:400;">{{flight.OrganizationName}}</th>
+  <th style="font-weight:400;">{{flight.DroneName}}</th>
+  <th style="font-weight:400;">{{flight.Duration}}</th>
+  <th style="font-weight:400;">{{flight.StatusText}}</th>
+  <th style="font-weight:400;">{{flight.DateCreated | date: 'short'}}</th>
+
+  <th>
+      <a style="padding:6px; color: #080808; font-size: 15px;" title="Workspace">
+        <i class="fa fa-line-chart" aria-hidden="true" ></i>
+        </a>
+
+      <a style="padding:6px; color: #080808; font-size: 15px;" title="Edit" routerLink="/flightlogs/flightlog/{{flight.FlightId}}">
+        <i class="fa fa-pencil-square-o" aria-hidden="true" ></i>
+        </a>
+        <a style="padding:6px; color: #080808; font-size: 15px;" title="Delete" routerLink="">
+          <i class="fa fa-trash" aria-hidden="true" ></i>
+          </a>
+          <a style="padding:6px; color: #080808; font-size: 15px;" title="View" routerLink="/flightlogs/flightlogview/{{flight.FlightId}}">
+            <i class="fa fa-eye" aria-hidden="true" ></i>
+            </a></th>
+  </tr>
+  </tbody>
+  </table>

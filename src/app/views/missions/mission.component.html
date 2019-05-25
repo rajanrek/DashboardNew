@@ -1,0 +1,371 @@
+<div class="row" >
+    <div class="container-fluid edit-view-mn" >
+      <div class="container das-middle-sec edit-view panel padding-10">
+        <div class="col-md-12">
+          <div class="page-header">
+            <h3>Select Mission Type</h3>
+          </div>
+          <div class="row col-md-12" >
+            <div class="btns" style="display:contents;">
+              <div class="col-md-6 bas-bx-1 mission-opt" >
+                <button click.delegate="selectMissionType(1)">
+                  <div class="das-bx das-bx-img">
+                    <div class="image-sec"><i class="mission-menu-icons ico_polygon"></i></div>
+                    <div class="cnt-sec"><span>Line String Mission</span></div>
+                  </div>
+                  <div class="das-bx-text">
+                    Click anywhere on the map to add a vertex - add multiple vertices to make a mission
+                  </div>
+                </button>
+              </div>
+              <div class="col-md-6 bas-bx-2 mission-opt">
+                <button click.delegate="selectMissionType(2)">
+                  <div class="das-bx das-bx-img">
+                    <div class="image-sec"><i class="mission-menu-icons ico_freehand"></i></div>
+                    <div class="cnt-sec"><span>Freehand Mission</span></div>
+                  </div>
+                  <div class="das-bx-text">
+                    Draw a freehand curve around the survey area to make a mission
+                  </div>
+                </button>
+              </div>
+              <div class="col-md-6 bas-bx-3 mission-opt">
+                <button click.delegate="selectMissionType(3)">
+                  <div class="das-bx das-bx-img">
+                    <div class="image-sec"><i class="mission-menu-icons   ico_hexagon"></i></div>
+                    <div class="cnt-sec"><span>Tower Inspection Columnar</span></div>
+                  </div>
+                  <div class="das-bx-text">
+                    Set a point of interest on the map by tapping on the point of interest
+                  </div>
+                </button>
+              </div>
+              <div class="col-md-6 bas-bx-4 mission-opt">
+                <button click.delegate="selectMissionType(4)">
+                  <div class="das-bx das-bx-img">
+                    <div class="image-sec"><i class="mission-menu-icons ico_spiral"></i></div>
+                    <div class="cnt-sec"><span>Tower Inspection Tornado</span></div>
+                  </div>
+                  <div class="das-bx-text">
+                    Set a point of interest on the map by clicking on the point of interest
+                  </div>
+                </button>
+              </div>
+              <div class="col-md-6 bas-bx-5 mission-opt">
+                <button click.delegate="selectMissionType(5)">
+                      <div class="das-bx das-bx-img">
+                          <div class="image-sec"><i class="mission-menu-icons   ico_polygrid"></i></div>
+                          <div class="cnt-sec"><span>Polygrid Mission</span></div>
+                      </div>
+                      <div class="das-bx-text">
+                          Set a point of interest on the map by tapping on the point of interest
+                      </div>
+                  </button>
+              </div>
+              <div class="col-md-6 bas-bx-6 mission-opt">
+                <button click.delegate="selectMissionType(6)">
+                      <div class="das-bx das-bx-img">
+                          <div class="image-sec"><i class="mission-menu-icons ico_guidewire"></i></div>
+                          <div class="cnt-sec"><span>Guyed Wire Mission</span></div>
+                      </div>
+                      <div class="das-bx-text">
+                          Mark start point and end point of a guyed wire on the map, then select height of both points.
+                      </div>
+                  </button>
+              </div>
+              <div class="col-md-6 bas-bx-7 mission-opt">
+                <button click.delegate="selectMissionType(7)">
+                      <div class="das-bx das-bx-img">
+                          <div class="image-sec"><i class="mission-menu-icons ico_custom_mission"></i></div>
+                          <div class="cnt-sec"><span>Custom Mission</span></div>
+                      </div>
+                      <div class="das-bx-text">
+                          Manually Fly the aircraft with the remote controller, the Data will be saved in the server.
+                      </div>
+                  </button>
+              </div>
+              <!--<div class="col-md-6 bas-bx-8 mission-opt">
+                <button click.delegate="selectMissionType(8)">
+                      <div class="das-bx das-bx-img">
+                          <div class="image-sec"><i class="mission-menu-icons ico_hexagon"></i></div>
+                          <div class="cnt-sec"><span>Tower Inspection Columnar (Stop and Go)</span></div>
+                      </div>
+                      <div class="das-bx-text">
+                          Set a point of interest on the map by tapping on the point of interest.
+                      </div>
+                  </button>
+              </div>-->
+
+              <div class="col-md-6 bas-bx-9 mission-opt">
+                <button click.delegate="selectMissionType(10)">
+                  <div class="das-bx das-bx-img">
+                    <div class="image-sec"><i class="mission-menu-icons ico_custom_mission"></i></div>
+                    <div class="cnt-sec"><span>Facade Mission</span></div>
+                  </div>
+                  <div class="das-bx-text">
+                    Manually Fly the aircraft with the remote controller, the Data will be saved in the server.
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+   <div class="row">
+      <div class="container-fluid edit-view-mn">
+
+        <form role="form">
+        <div class="container das-middle-sec edit-view panel padding-10">
+            <div class="col-md-12">
+              <div class="page-header">
+                <h3>
+                  Mission
+                </h3>
+              </div>
+            </div>
+
+             <div class="col-md-12">
+              <div class="row">
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="name">Name</label>
+                    <input type="text" class="form-control" placeholder="Roof Scan" />
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="pilot">Pilot</label>
+                    <select class="form-control">
+                      <option value="">Select</option>
+                      <option>
+                      </option>
+                    </select>
+                  </fieldset>
+                </div>
+
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="drone">UAV</label>
+                    <select class="form-control">
+                      <option value="0">Select</option>
+                      <option>
+                      </option>
+                    </select>
+                  </fieldset>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="project">Project</label>
+                    <select class="form-control">
+                      <option value="0">Select</option>
+                      <option>
+                      </option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="location">Location</label>
+                    <select class="form-control">
+                      <option value="0">Select</option>
+                      <option>
+                      </option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="date">Flight Date</label>
+                    <input id="flightDate" type="date" class="form-control" placeholder="">
+                  </fieldset>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="duration">Duration (minutes)</label>
+                    <input type="number" min="10" max="60" class="form-control" placeholder="">
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="type">Flight Type</label>
+                    <select class="form-control">
+                      <option value="0">Select</option>
+                      <option>
+                      </option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="organization">Organization</label>
+                    <select class="form-control">
+                      <option value="0">Select</option>
+                      <option>
+                      </option>
+                    </select>
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="type">Speed (mph)</label>
+                    <input type="number" min="1" max="30" class="form-control" placeholder="">
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="duration"></label>
+                    <input type="number" min="5" max="1500" class="form-control" placeholder="">
+                  </fieldset>
+
+                  <fieldset class="form-group">
+                    <label class="control-label" for="duration"></label>
+                    <label class="control-label"  for="duration"></label>
+                    <input type="number" class="form-control" placeholder="">
+                  </fieldset>
+
+
+                  <fieldset class="form-group">
+                    <label class="control-label" for="Height1"></label>
+                    <input type="number" min="5" max="400" class="form-control" placeholder="Height of the Starting point of Guidewire">
+                  </fieldset>
+                </div>
+
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="type"></label>
+                    <input type="number" min="0" max="360" class="form-control" placeholder="">
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <label class="control-label" for="duration"></label>
+                    <input type="number" class="form-control" placeholder="">
+                  </fieldset>
+                  <fieldset class="form-group">
+                    <label class="control-label" for="Height2"></label>
+                    <input type="number" min="5" max="400" class="form-control" placeholder="Height of the End point of Guidewire">
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="type"></label>
+                    <input type="number" min="20" max="300" class="form-control" placeholder="">
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="duration">No. of inspection Divisions</label>
+                    <input type="number" min="2" max="12" class="form-control" placeholder="">
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="duration">Rotation Type: </label>
+                    <Select class="form-control">
+                      <option>
+                      </option>
+                    </Select>
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="type">Transition between 2 columns at</label>
+
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="type">Auto Capture Images based on Time</label>
+
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group" >
+                    <label class="control-label" for="type">Autocapture Time (Seconds)</label>
+                    <input type="number" min="1" max="60" class="form-control" placeholder="">
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <fieldset class="form-group">
+                    <label class="control-label"   for="type">Side Lap</label>
+                    <label class="control-label" for="type">Overlap</label>
+                    <input type="number" min="1" max="100" class="form-control" placeholder="">
+                  </fieldset>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-12">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="notes">Notes</label>
+                    <textarea class="form-control" id="notes" rows="3"></textarea>
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <h3 class="text-primary">Equipment Information</h3>
+              <div class="row">
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="name">Batteries</label>
+                    <select class="form-control">
+                      <option value="0">Select</option>
+                      <option>
+                      </option>
+                    </select>
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="pilot">Camera/Sensors</label>
+                    <select class="form-control">
+                      <option value="0">Select</option>
+                      <option>
+                      </option>
+                    </select>
+
+                  </fieldset>
+                </div>
+                <div class="col-md-4">
+                  <fieldset class="form-group">
+                    <label class="control-label" for="drone">Other Payloads</label>
+                    <input type="text" class="form-control" placeholder="other payload">
+                  </fieldset>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-12">
+              <button class="btn btn-primary btn-lg" click.delegate="saveandlisting()">
+                <i class="fa fa-check" aria-hidden="true"></i> Save
+              </button> &nbsp;
+              <button class="btn btn-primary btn-lg" click.delegate="saveandwaypoints()">
+                <i class="fa fa-check" aria-hidden="true"></i> Save and Waypoints
+              </button> &nbsp;
+              <button class="btn btn-primary btn-lg" routerLink="/missions">
+                <i class="fa fa-times" aria-hidden="true"></i> Cancel
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>

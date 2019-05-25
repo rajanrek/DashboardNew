@@ -1,0 +1,52 @@
+<div class="profile_page">
+    <div class="row">
+        <div class="pr_top-sec">
+            <div class="col-md-12">
+                    <h2 class="pull-left">UAVs</h2>
+                    <div class="right-botton pull-right change-password">
+                        <button type="button" class="btn btn-primary btn-md" routerLink="/uavs/uav/{{0}}"><i class="fa fa-plus" aria-hidden="true"></i> Add New UAV</button>
+                    </div>
+            </div>
+
+        </div>
+    </div>
+
+  </div>
+  <table>
+    <tr>
+      <th style="font-weight:600;">Name</th>
+      <th style="font-weight:600;">Device Id</th>
+      <th style="font-weight:600;">Device Model Id</th>
+      <th style="font-weight:600;">UIN</th>
+      <th style="font-weight:600;">Organization</th>
+      <th style="font-weight:600;">Weight(Lb)</th>
+      <th style="font-weight:600;">Status</th>
+      <th style="font-weight:600;">Creation Date</th>
+      <th style="font-weight:600;">Action</th>
+    </tr>
+  <tbody >
+    <tr *ngFor="let uav of uavs">
+      <th style="font-weight:400;">{{uav.Name}}</th>
+      <th style="font-weight:400;">{{uav.DeviceId}}</th>
+      <th style="font-weight:400;">{{uav.DeviceModelId}}</th>
+      <th style="font-weight:400;">{{uav.UIN}}</th>
+      <th style="font-weight:400;">{{uav.OrganizationName}}</th>
+      <th style="font-weight:400;">{{uav.Weight}}</th>
+      <th style="font-weight:400;">{{uav.IsActive}}</th>
+      <th style="font-weight:400;">{{uav.DateCreated |date:'short'}}</th>
+
+      <th>
+        <a style="padding:4px; color: #44a2d2" title="Edit" routerLink="/uavs/uav/{{uav.DroneId}}">
+          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        </a>
+        <a style="padding:4px; color: #44a2d2" title="Delete" (click)="deleteUAV(uav.DroneId)">
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        </a>
+        <a title="View" style="color: #44a2d2" routerLink="/uavs/uavview/{{uav.DroneId}}">
+          <i class="fa fa-eye" aria-hidden="true"></i>
+        </a>
+      </th>
+    </tr>
+  </tbody>
+</table>
+

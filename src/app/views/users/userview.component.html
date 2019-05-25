@@ -1,0 +1,93 @@
+<div class="container das-middle-sec edit-view panel padding-5">
+	  <div class="">
+        <div class="row">
+            <div class="container">
+				<div class="col-md-12">
+					<div class="page-header border-none">
+						<h2>View User</h2>
+					</div>
+				</div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <form class="add-form view">
+                    <div class="col-md-12">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <fieldset class="form-group view-inner">
+                                    <label class="control-label" name="firstname">First Name</label>
+                                    <span>{{user.FirstName}}</span>
+
+                                </fieldset>
+                            </div>
+                            <div class="col-md-4">
+                                <fieldset class="form-group view-inner">
+                                    <label class="control-label" name="lastname">Last Name</label>
+                                    <span>{{user.LastName}}</span>
+
+                                </fieldset>
+                            </div>
+                            <div class="col-md-4">
+                                <fieldset class="form-group view-inner">
+                                    <label class="control-label" name="phone">Phone</label>
+                                    <span>{{user.PhoneNumber}}</span>
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <fieldset class="form-group view-inner">
+                                    <label class="control-label" name="email">Email</label>
+                                    <span>{{user.Email}}</span>
+
+                                </fieldset>
+                            </div>
+                            <div class="col-md-4">
+                                <fieldset class="form-group view-inner">
+                                    <label class="control-label" name="Organization">Organization</label>
+                                    <span>{{user.OrganizationName}}</span>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-4">
+                                <fieldset class="form-group view-inner">
+                                    <label class="control-label" name="active">Status</label>
+                                    <span>{{user.IsActive==true?'Active':'Inactive'}}</span>
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <fieldset class="form-group view-inner">
+                                    <label class="control-label" name="Role">Role</label>
+                                    <select multiple style="width: 100%"  disabled>
+                                        <option name="Role" *ngFor="let role of user.SelectedRole" >{{role.RoleName}}</option>
+                                    </select>
+
+                                </fieldset>
+                            </div>
+                        
+                            <div class="col-md-4">
+                                <fieldset class="form-group view-inner">
+                                    <label class="control-label" name="ApplicationKey">Pilot License No.</label>
+                                    <span>{{user.PilotNo}}</span>
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                    <div class="col-md-12">
+                        <button class="btn btn-primary btn-lg " routerLink="/users">
+                            <i class="fa fa-arrow-left" aria-hidden="true"></i> Back
+                        </button>&nbsp;
+   
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+      </div>

@@ -1,0 +1,122 @@
+<div class="edit-view panel padding-5">
+    <div class="row no-margin padding-5">
+  <div class="col-md-12">
+    <div class="page-header">
+      <h3>
+        View Flight
+      </h3>
+    </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row no-margin">
+            <form class="add-form view">
+                <div class="row">
+                    <div class="col-md-4">
+                        <fieldset class="form-group view-inner">
+                            <label class="control-label" name="name">Mission Name</label>
+                            <span class="view-fl">{{flights.MissionName}}</span>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-4">
+                        <fieldset class="form-group view-inner">
+                            <label class="control-label" name="pilot">Pilot</label>
+                            <span class="view-fl">{{flights.PilotName}}</span>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-4">
+                        <fieldset class="form-group view-inner">
+                            <label class="control-label" name="drone">For Drone</label>
+                            <span class="view-fl">{{flights.DroneName}}</span>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <fieldset class="form-group view-inner">
+                            <label class="control-label" name="project">Project</label>
+                            <span class="view-fl">{{flights.Project}}</span>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-4">
+                        <fieldset class="form-group view-inner">
+                            <label class="control-label" name="location">Location</label>
+                            <span class="view-fl">{{flights.Location}}</span>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-4">
+                        <fieldset class="form-group view-inner">
+                            <label class="control-label" name="date">Flight Date</label>
+                            <span class="view-fl">{{flights.FlightDate}}</span>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <fieldset class="form-group view-inner">
+                            <label class="control-label" name="duration">Duration (minutes)</label>
+                            <span class="view-fl"></span>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-4">
+                        <fieldset class="form-group view-inner">
+                            <label class="control-label" name="type">Type</label>
+                            <span class="view-fl">{{flights.Type}}</span>
+                        </fieldset>
+                    </div>
+                
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <fieldset class="form-group view-inner">
+                            <label class="control-label" for="distance"></label>
+                            <span class="view-fl">{{flights.MissionName}}</span>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-4">
+                        <fieldset class="form-group view-inner">
+                            <label class="control-label" for="maxalt"></label>
+                            <span class="view-fl">{{flights.MissionName}}</span>
+                        </fieldset>
+                    </div>
+                    <div class="col-md-4">
+                        <fieldset class="form-group view-inner">
+                            <label class="control-label" for="drone">Organization</label>
+                            <span class="view-fl">{{flights.MissionName}}</span>
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <fieldset class="form-group view-inner">
+                            <label class="control-label" for="notes">Mission Notes</label>
+                            <span class="view-fl"></span>
+                        </fieldset>
+                    </div>
+                </div>
+
+                <!-- <h3 class="title-2">Flight Path Map</h3>
+                <div class="row">
+                    <div class="col-md-12">
+                        <fieldset class="form-group view-inner">
+                            <label class="control-label" for="metar">No Flight Logs Available.</label>
+                        </fieldset>
+                        <div style="display:block; width:100%;">
+                            <div id="map" style="height:75vh;width:100%;position:relative;"></div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <div class="col-md-12 padding-5">
+                        <button class="btn btn-primary btn-lg" routerLink="/flightlogs">
+                            <i class="fa fa-arrow-left" aria-hidden="true"></i> Back
+                        </button>&nbsp;
+                        <button class="btn btn-primary btn-lg" click.delegate="edit(flight.FlightId)">
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>

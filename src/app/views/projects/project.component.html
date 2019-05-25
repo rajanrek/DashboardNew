@@ -1,0 +1,83 @@
+<div class="page-header">
+    <h3 class="text-dark">Project Information</h3>
+</div>
+
+
+<form >
+<div class="row">
+      
+    <div class="col-md-4">
+        <fieldset class="form-group">
+            <label class="control-label" name="name">Name</label>
+            <div class="input-group">
+                <div class="input-group-addon"><i class="glyphicon glyphicon-tags"></i></div>
+                <input type="text" name="Name"  class="form-control" placeholder="Project Name" [(ngModel)]="project.Name" />
+            </div>
+        </fieldset>
+    </div>
+    
+    <!-- <div class="col-md-4">
+        <fieldset class="form-group">
+            <label class="control-label" >Client</label>
+            <select class="form-control" name="Client">
+                <option ClientId="project.ClientId" name="Clients">Select</option>
+                <option *ngFor="let item of project.Clients"  [(ngModel)]="item.ClientId">{{item.Name}}</option>
+            </select>
+        </fieldset>
+    </div> -->
+    <div class="col-md-4">
+        <fieldset class="form-group">
+            <label class="control-label" for="date">Revenue Amount</label>
+            <div class="input-group">
+                <div class="input-group-addon"></div>
+                <input type="number" class="form-control" name="RevenueAmount"  placeholder="" [(ngModel)]="project.RevenueAmount" />
+            </div>
+        </fieldset>
+    </div> 
+    <div class="col-md-4">
+        <fieldset class="form-group">
+            <label class="control-label" >Organization</label>                                            
+            <select name="OrganizationId" class="form-control">
+                <option *ngFor="let pro of project.OrganizationLookup" [(ngModel)]="pro.OrganizationId" name="Name">{{pro.Name}}</option>
+            </select>
+        </fieldset>
+    </div> 
+    <div class="col-md-4">
+        <fieldset class="form-group">
+            <label class="control-label" name="active">Active</label>
+            <br />
+            <div class="onoffswitch">
+                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox"  id="myonoffswitch"  checked="{{project.IsActive}}">
+                    <label class="onoffswitch-label" for="myonoffswitch">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </div>
+            
+        </fieldset>
+    </div>
+    <div class="col-md-4">
+        <fieldset class="form-group">
+            <label class="control-label" for="file">Project Geography For Upload</label>
+            <input type="file" id="ctrlFile" name="files" accept=".kml" data-min-file-count="1" change.delegate="fileSelected($event)">
+            <small class="text-muted">kml file only.</small>
+        </fieldset>
+    </div>
+    <div class="col-md-12">
+        <fieldset class="form-group">
+            <label class="control-label">Notes</label>
+            <textarea class="form-control" id="notes" rows="3" name="Notes"  [(ngModel)]="project.Notes"></textarea>
+        </fieldset>
+    </div>
+    <div class="col-md-12">
+        <button class="btn btn-primary btn-lg" >
+            <i class="fa fa-check" aria-hidden="true"></i> Save
+        </button>
+        &nbsp;
+        <button class="btn btn-primary btn-lg"routerLink="/projectList">
+            <i class="fa fa-times" aria-hidden="true"></i> Cancel
+        </button>
+
+   </div>
+   </div>
+</form>

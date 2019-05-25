@@ -1,0 +1,24 @@
+<div class="left_side_bar" id="right_side_bar">
+
+    <div class="modal-header">
+      
+       <h4 class="modal-title">Images Of The Place</h4>
+       <button type="button" class="btn btn-outline-dark" (click)="myFunction()">X</button>
+      
+       <button type="button" class="close" aria-label="Close" (click)="myFunction()">
+         <span aria-hidden="true">&times;</span>
+       </button>
+     </div>
+    
+     <div class="modal-footer">
+      
+       </div>
+     <!-- <img class="brochure-poster1"  [src]="imageUrl" style="margin-top: 20px; max-width:100px" />
+       <img class="brochure-poster2" [src]="imageUrl2" style="margin-top: 20px; max-width:100px" /> -->
+    <div class="images-container">
+    
+       <img id="myImg"  [src]="imageUrl" alt="Snow"  style="width:50%; max-width:100px">
+    
+     <img id="myImg"  [src]="imageUrl2" alt="Snow"  style="width:50%; max-width:100px">
+   </div>
+ 

@@ -1,0 +1,297 @@
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)"
+             size="default"
+             color="#fff"
+             type="line-spin-fade">
+</ngx-spinner>
+<workspace-menubar></workspace-menubar>
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card ">
+        <div class="card-header ">
+          Inspection
+        </div>
+        <div class="card-body ">
+          <div class="container">
+    <div class="row">
+      <div class="col-md-9" id="content" style="background-color:#e6e6e6">
+        <!--<div class="progress pgrsStyle" show.bind="completed">
+          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+               aria-valuemin="0" aria-valuemax="100" css="width: {completed};">
+            {{completed}}
+          </div>
+        </div>-->
+        <div class="bgrnd" *ngIf="isLoaded">
+          <img src="../assets/garudauavlogo.png" alt="logo" style="max-width:165px;margin-left:40%">
+          
+          <!--<figure if.bind="!garudaLogo" class="center">-->
+          <!--<div> <img [src]="logo" alt="logo" class="center" *ngIf="!garudaLogo"></div>-->
+          <!--<div style="margin-left:50%; margin-top:40px;" *ngIf="!garudaLogo">
+            <figcaption>Powered By</figcaption>
+            <img  src="../assets/img/logo.png" alt="logo" class="poweredLogo">
+          </div>-->
+          <!--</figure>-->
+          <!-- <div class="inspection-heading">
+            <p style="margin-top:10px;">Inspection Summary</p>
+          </div> -->
+          <!-- <div class="container-fluid fluidMarginTop">
+            <div class="row">
+              <div id="summaryContent" class="col-lg-9">
+                <div class="container">
+                  <ul>
+                    <li>
+                      <div class="inspection-heading sevDivHeight">
+                        <p class="pull-left">Flight Type</p>
+                        <p class="pull-right">{{InspectionType}}</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="inspection-heading sevDivHeight">
+                        <p class="pull-left">Location</p>
+                        <p class="pull-right">{{Location}}</p>
+                      </div>
+                    </li>
+
+                    <li>
+                      <div class="inspection-heading sevDivHeight">
+                        <p class="pull-left">Client</p>
+                        <p class="pull-right"> {{ClientName}}</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="inspection-heading sevDivHeight">
+                        <p class="pull-left">Pilot</p>
+                        <p class="pull-right"> {{pilotName}}</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="inspection-heading sevDivHeight">
+                        <p class="pull-left">Equipment Used:</p>
+                        <p class="pull-right"> {{droneName}}</p>
+                      </div>
+                     </li>
+                  </ul>
+                  <div class="inspection-heading wetrDivHeight">
+                    <p>Weather Summary</p>
+                    <span class="pull-left">Cloud Cover (%)</span>
+                    <span class="pull-right"> {{CloudCover}}</span><br />
+                    <span class="pull-left">Temperature (F)</span>
+                    <span class="pull-right"> {{Temperature}}</span><br />
+                    <span class="pull-left">Wind Speed (m/s)</span>
+                    <span class="pull-right"> {{WindSpeed}}</span><br />
+                    <span class="pull-left">Humidity (%)</span>
+                    <span class="pull-right"> {{Humidity}}</span><br />
+                  </div>
+                </div>
+              </div>
+              <nav id="SummaryNav" class="col-lg-3">
+                <div class="sidenavWell">
+                  <span>Report Date</span><br />
+                  <span>{{date}}</span>
+                </div>
+                <div class="sidenavWell">
+                  <span>Annotations</span><br />
+                  <span>{{medialist.totalAnotation}}</span>
+                </div>
+                <div class="sidenavWell">
+                  <span>Type:</span><br />
+                  <span>{{InspectionType}}</span>
+                </div>
+                <div class="sidenavWell">
+                  <span>Company</span><br />
+                  <span>{{oranizationName}}</span>
+                </div>
+                <div class="sidenavWell">
+                  <span>Inspection Created</span><br />
+                  <span>{{date}}</span>
+                </div>
+                <div class="sidenavWell">
+                  <span>Report Created By</span><br />
+                  <span>{{userName}}</span><br />
+                  <span>{{loginEmail}}</span>
+                </div>
+
+              </nav>
+            </div>
+          </div> -->
+          <div class="inputbox" >
+              <!-- <h3>Discription about servey:</h3>
+              
+              <textarea rows="10" cols="50">
+                
+                  </textarea> -->
+                  <img src="../assets/transmission.JPG" alt="logo"  style="max-width:100%;">
+                  <div  class="top-left"><strong >ELECTRIC POLE & TRANSMISSION
+                    LINE INSPECTION REPORT</strong></div>
+            </div>
+           
+            <h1 id="comp">GarudaUAV Soft Solutions Pvt. Ltd.</h1>
+            <span style="color: #000000;font-size: medium;"> 
+              C-704-705, Plot B-8, Noida One IT Park, Sector-62, Noida 
+                Website: https://garudauav.com
+            </span>
+        </div>
+        
+        <!-- <div class="bgrnd"> -->
+          <!--<img src="styles/images/logo-login.png" alt="logo" style="max-width:300px;margin-left:25%">-->
+          <!-- <div class="inspection-heading">
+            <p style="margin-top:10px;"> Annotation Overview</p>
+          </div> -->
+          <!-- <div id="map"></div> -->
+        
+          <!-- <div class="container contTopMargin" *ngIf="isLoaded">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="../assets/img/low.png" alt="logo">
+                <span class="badgeLow">{{medialist.totalLowCount}}</span>
+              </div>
+              <div class="col-md-3">
+                <img src="../assets/img/med.png" alt="logo">
+                <span class="badgeMed"> {{medialist.totalMediumCount}}</span>
+              </div>
+              <div class="col-md-3">  
+                <img src="../assets/img/high.png" alt="logo">
+                <span class="badgeHigh">{{medialist.totalHighCount}}</span>
+              </div>
+              <div class="col-md-3">
+                <img src="../assets/img/info.png" alt="logo">
+                <span class="badgeInfo"> {{medialist.totalInfoCount}}</span>
+              </div>
+            </div>
+          </div> -->
+        <!-- </div> -->
+        <!-- <div> -->
+          <!-- <div class="container bgrnd" *ngFor="let pages of filterData">
+            <div class="inspection-heading">
+              <p style="margin-top:10px;"> Severity Overview</p>
+            </div>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Severity</th>
+                  <th>Issues</th>
+                  <th>Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let pagedata of pages">
+                  <td>{{pagedata.AnnotationId}}</td>
+                  <td>{{pagedata.Severity}}</td>
+                  <td>{{pagedata.annoTypeName}}</td>
+                  <td>{{pagedata.AnnotationData}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div> -->
+        <!-- </div> -->
+        
+        <div class="container bgrnd"  *ngFor="let image of images; let i=index" style="background-color:#fff !important">
+            <div class="logofix">
+                <img src="../assets/garudauavlogo.png" alt="logo"  style="max-width:100px; float: right;">
+                <!-- <p>GarudaUAV Soft Solutions Pvt. Ltd.
+                    Unit 704-705, 7th Floor, B-8, Tower -C, Noida One
+                    IT Park, Sector-62, Noida-201309
+                    Website: https://garudauav.com</p> -->
+                    
+            </div>
+          <div class="inspection-heading">
+            <p style="margin-top:10px;">Inspection Summary</p>
+          </div>
+        
+          <div class="row">
+            <div class="inspection-heading">
+              <p style="margin-top:10px;"> {{image.MissionName}}</p>
+            </div>
+            <div class="col-md-12">
+              <div id="{{'map' + i }}"></div>
+            </div>
+            <div class="col-md-4">
+              <div class="container">
+                <div class="row">
+
+                  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xs-offset-0 col-sm-offset-0 col-md-offset-3 col-lg-offset-3 toppad">
+
+
+                    <div class="panel panel-info">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">{{image.name}}</h3>
+                      </div>
+                      <div class="panel-body">
+                        <!--<div class="row">-->
+                        <!--<div class=" col-md-9 col-lg-9 ">-->
+                        <table class="table table-user-information">
+                          <tbody>
+                            <tr>
+                              <td>Image:</td>
+                              <td >{{image.metaData.CameraMake}} {{image.metaData.CameraModel}}</td>
+                            </tr>
+                            <tr>
+                              <td>Date:</td>
+                              <td>{{image.metaData.TimeStamp}}</td>
+                            </tr>
+                            <tr>
+                              <td>GPS:</td>
+                              <td>{{image.metaData.Latitude}}, {{image.metaData.Longitude}}</td>
+                            </tr>
+
+                            <tr>
+                            <tr>
+                              <td>Altitude:</td>
+                              <td>{{image.metaData.Altitude}}</td>
+                            </tr>
+                            <!--<tr>
+                              <td>Orientation</td>
+                              <td>{{image.metaData.Orientation}}</td>
+                            </tr>-->
+                          </tbody>
+                        </table>
+                        <!--</div>-->
+                        <!--</div>-->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div id="{{ 'abc' + i }}" style="width:100%; margin-left: 64px;"></div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="inspection-heading">
+              <p style="margin-top:30px;"> Annotation Details</p>
+            </div>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>Id</th>
+                  <th>Severity</th>
+                  <th>Issues</th>
+                  <th>Comments</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let ImageAnnotation of image.Annotations">
+                  <td>{{ImageAnnotation.AnnotationId}}</td>
+                  <td>{{ImageAnnotation.Severity}}</td>
+                  <td>{{ImageAnnotation.annoTypeName}}</td>
+                  <td>{{ImageAnnotation.AnnotationData}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+       </div>
+    </div>
+   <div class="col-md-3 sidePanelTop" *ngIf="isLoaded">
+        <button id="cmd" class="btn btn-primary btn-lg btnmargin" [disabled]="!loadcomplete" (click)="generateAllPdf()">Generate PDF</button>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+</div>
+</div>
+</div>

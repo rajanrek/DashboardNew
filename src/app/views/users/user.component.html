@@ -1,0 +1,117 @@
+<div class="page-header">
+  <h3>User Information</h3>
+</div>
+<form name="form" #myform="ngForm" (ngSubmit)="f.form.valid && onSubmit(myform)" #f="ngForm" novalidate>
+  <div class="row">
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label class="control-label" name="FirstName">First Name</label>
+        <div class="input-group">
+          <div class="input-group-addon"><i class="glyphicon anra-ico_user_light"></i></div>
+          <input type="text" name="FirstName" [(ngModel)]="user.FirstName" class="form-control" #FirstName="ngModel" 
+          [ngClass]="{ 'is-invalid': f.submitted && FirstName.invalid  }" required placeholder="First Name">
+          <div *ngIf="f.submitted && FirstName.invalid"  class="invalid-feedback"> </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label class="control-label" name="LastName">Last Name</label>
+        <div class="input-group">
+          <div class="input-group-addon"><i class="glyphicon anra-ico_user_light"></i></div>
+          <input type="text" name="LastName" [(ngModel)]="user.LastName" class="form-control"  #LastName="ngModel" 
+          [ngClass]="{ 'is-invalid': f.submitted && LastName.invalid }" required placeholder="Last Name">
+          <div *ngIf="f.submitted && LastName.invalid" class="invalid-feedback">
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label class="control-label" name="Email">Phone</label>
+        <div class="input-group">
+          <div class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></div>
+          <input name="PhoneNumber" [(ngModel)]="user.PhoneNumber" class="form-control" #PhoneNumber="ngModel" 
+          [ngClass]="{'is-invalid': f.submitted && PhoneNumber.invalid}" required placeholder="PhoneNumber">
+          <div *ngIf="f.submitted && PhoneNumber.invalid" class="invalid-feedback">
+         </div>
+        </div>
+      </fieldset>
+    </div>
+ 
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label class="control-label" name="Email">Email</label>
+        <div class="input-group">
+          <div class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></div>
+          <input name="email" [(ngModel)]="user.Email" class="form-control" #Email="ngModel" 
+          [ngClass]="{ 'is-invalid': f.submitted && Email.invalid }" required placeholder="Email">
+          <div *ngIf="f.submitted && Email.invalid" class="invalid-feedback">
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label name="license">Pilot License No.</label>
+        <input type="text" name="license" [(ngModel)]="user.PilotNo" class="form-control" #PilotNo="ngModel" 
+        [ngClass]="{ 'is-invalid': f.submitted && PilotNo.invalid }" required placeholder="Pilot License No">
+        <div *ngIf="f.submitted && PilotNo.invalid" class="invalid-feedback">
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label class="control-label" name="OrganizationName">Organization</label>
+        <input type="text" name="OrganizationName" [(ngModel)]="user.OrganizationName" class="form-control" #OrganizationName="ngModel" 
+        [ngClass]="{ 'is-invalid': f.submitted && OrganizationName.invalid }" required placeholder="OrganizationName">
+        <div *ngIf="f.submitted && OrganizationName.invalid" class="invalid-feedback">
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label class="control-label" name="Role">Role</label>
+        <select name="role" id="ddlRole" multiple style="width: 100%" (change)="onOptionsSelected($event)">
+          <option  class="role" [value]="user.SelectedRole" SelectedRole="role.RoleName" 
+           *ngFor="let role of user.RoleLookup"  name="roleName" [(ngModel)]="role.RoleName"  >{{role.RoleName}}</option>
+         </select>
+      </fieldset>
+    </div>
+    <div class="col-md-4">
+      <fieldset class="form-group">
+        <label class="control-label" name="password">Password</label>
+        <div class="input-group">
+          <div class="input-group-addon"><i class="glyphicon anra-ico_password"></i></div>
+          <input type="password" name="password" [(ngModel)]="user.Password" class="form-control" #Password="ngModel" 
+          [ngClass]="{ 'is-invalid': f.submitted && Password.invalid }" required minlength="6" placeholder="Password">
+          <div *ngIf="f.submitted && Password.invalid" class="invalid-feedback">
+               <div *ngIf="Password.errors.minlength">Password must be at least 6 characters</div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="col-md-4" show.bind="user.UserName==null">
+      <fieldset class="form-group">
+        <label class="control-label" name="repassword">Confirm Password<span class="text-danger"></span></label>
+        <div class="input-group">
+          <div class="input-group-addon"><i class="glyphicon anra-ico_password"></i></div>
+          <input type="password" name="password" id="confirmpassword"  [(ngModel)]="user.Password"  class="form-control" class="form-control" #Password="ngModel" 
+          [ngClass]="{ 'is-invalid': f.submitted && Password.invalid }" required minlength="6" placeholder="Password">
+          <div *ngIf="f.submitted && Password.invalid" class="invalid-feedback">
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    
+  </div>
+  <div class="col-md-12">
+    <button type="submit" class="btn btn-primary btn-lg">
+      <i class="fa fa-check" aria-hidden="true"></i> Save
+    </button>
+    &nbsp;
+    <button (click)="cancel()" class="btn btn-primary btn-lg">
+      <i class="fa fa-times"></i> Cancel
+    </button>
+  </div>
+</form>

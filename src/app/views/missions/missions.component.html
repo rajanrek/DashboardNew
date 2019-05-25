@@ -1,0 +1,76 @@
+<ngx-spinner bdColor="rgba(51, 51, 51, 0.8)"
+             size="default"
+             color="#fff"
+             type="line-spin-fade">
+</ngx-spinner>
+
+<div class="profile_page">
+  <div class="row">
+    <div class="pr_top-sec">
+      <div class="col-md-12">
+        <h2 class="pull-left">Missions</h2>
+        <div class="right-botton pull-right change-password">
+          <button type="button" class="btn btn-primary btn-md" routerLink="/missions/mission"><i class="fa fa-plus"
+              aria-hidden="true"></i> Add Mission</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<table>
+  <tr>
+    <th style="font-weight:600;">Name</th>
+    <th style="font-weight:600;">Organization</th>
+    <th style="font-weight:600;">Type</th>
+    <th style="font-weight:600;">Status</th>
+    <th style="font-weight:600;">Onsite/Travel Time(Hrs.)</th>
+    <th style="font-weight:600;">Creation Date</th>
+    <th style="font-weight:600;">Upload</th>
+    <th style="font-weight:600;">Action</th>
+  </tr>
+  <tbody>
+    <tr *ngFor="let mission of missions  | paginate: { itemsPerPage: 10, currentPage: p }">
+      <th style="font-weight:400;">{{mission.Name}}</th>
+      <th style="font-weight:400;">{{mission.OrganizationName}}</th>
+      <th style="font-weight:400;">{{mission.MissionTypeName}}</th>
+      <th style="font-weight:400;">{{mission.StatusText}}</th>
+      <th style="font-weight:400;">{{mission.TotalTravelHours}}</th>
+      <th style="font-weight:400;">{{mission.DateCreated | date:'short'}}</th>
+      <th><a style="padding:5px; color: #080808; font-size: 15px;" title="Waypoints" routerLink="/missions/user">
+          <i class="fa fa-files-o" aria-hidden="true"></i>
+        </a></th>
+      <th class="actionbtn" >
+        <a style="padding:5px; color: #080808; font-size: 15px;" title="Waypoints" routerLink="/missions/waypoints">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </a>
+        <a style="padding:5px; color: #080808; font-size: 15px;" title="Checklist" routerLink="/missions/user">
+          <i class="fa fa-list-alt" aria-hidden="true"></i>
+        </a>
+        <a style="padding:5px; color: #080808; font-size: 15px;" title="Live Mission View" routerLink="/missions/user">
+          <i class="anra-ico-drone" aria-hidden="true"></i>
+        </a>
+        <a style="padding:5px; color: #080808; font-size: 15px;" title="Time tracking" routerLink="/missions/user">
+          <i class="fa fa-clock-o" aria-hidden="true"></i>
+        </a>
+        <a style="padding:5px; color: #080808; font-size: 15px;" title="Clone" routerLink="/missions/user">
+          <i class="fa fa-clone" aria-hidden="true"></i>
+        </a>
+
+        <a style="padding:5px; color: #080808 ; font-size: 15px;" title="Edit" routerLink="/missions/mission">
+          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+        </a>
+        <a style="padding:5px; color: #080808; font-size: 15px;" title="Delete">
+          <i class="fa fa-trash" aria-hidden="true"></i>
+        </a>
+        <a title="View" style=" padding:5px; color: #080808; font-size: 15px;" routerLink="/projectList/missionview/{{mission.ProjectId}}">
+          <i class="fa fa-eye" aria-hidden="true"></i>
+
+        </a></th>
+    </tr>
+  </tbody>
+</table>
+<div class="pagination">
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

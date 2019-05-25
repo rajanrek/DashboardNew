@@ -1,0 +1,51 @@
+<div class="profile_page">
+  <div class="row">
+      <div class="pr_top-sec">
+          <div class="col-md-12">
+                  <h2 class="pull-left">Users</h2>
+                  <div class="right-botton pull-right change-password">
+                      <button type="button" class="btn btn-primary btn-md" routerLink="/users/user/{{0}}"><i class="fa fa-plus" aria-hidden="true"></i> Add User</button>
+                  </div>
+          </div>
+
+      </div>
+  </div>
+
+</div>
+<table>
+<tr   >
+<th style="font-weight:600;">Name</th>
+<th style="font-weight:600;">Email</th>
+<th style="font-weight:600;">Role Name</th>
+<th style="font-weight:600;">Status</th>
+<th style="font-weight:600;">Organization</th>
+<th style="font-weight:600;">Creation Date</th>
+<th style="font-weight:600;">Drone(s)</th>
+<th style="font-weight:600;">Action</th>
+</tr>
+<tbody >
+<tr *ngFor="let user of users">
+<th style="font-weight:400;">{{user.FullName}}</th>
+<th style="font-weight:400;">{{user.Email}}</th>
+<th style="font-weight:400;">{{user.RoleName}}</th>
+<th style="font-weight:400;">{{user.StatusText}}</th>
+<th style="font-weight:400;">{{user.OrganizationName}}</th>
+<th style="font-weight:400;">{{user.DateCreated | date:'short'}}</th>
+<th><a routerLink="/users/users-drone/{{user.Id}}" title="Drone">
+  <i class="fa fa-space-shuttle" area-hidden="true"></i>
+</a></th>
+<th>
+
+<a style="padding:4px; color: #44a2d2" title="Edit" routerLink="/users/user/{{user.Id}}">
+<i class="fa fa-pencil-square-o" aria-hidden="true" ></i>
+</a>
+<a style="padding:4px; color: #44a2d2" title="Delete" (click)="deleteUser(user.Id)">
+<i class="fa fa-trash" aria-hidden="true"></i>
+</a>
+<a  title="View" style="color: #44a2d2" routerLink="/users/userview/{{user.Id}}">
+<i class="fa fa-eye" aria-hidden="true"></i>
+
+</a></th>
+</tr>
+</tbody>
+</table>

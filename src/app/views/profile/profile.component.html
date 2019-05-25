@@ -1,0 +1,64 @@
+<div class="profile_page">
+        <div class="row">
+            <div class="pr_top-sec">
+                <div class="col-md-12">
+                        <h2 class="pull-left">My Profile</h2>
+                        <div class="right-botton pull-right change-password">
+                            <button click.delegate="changePassword()" type="button" class="btn btn-primary btn-md"><i class="fa fa-pencil" aria-hidden="true"></i>Change Password</button>
+                        </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="row">
+                <form class="add-form view">
+                    <div class="col-md-12">
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <fieldset class="form-group view-inner">
+                                    <label class="control-label" for="firstname">First Name</label>
+                                    <span class="view-fl">{{profiledata.FirstName}}</span>
+
+                                </fieldset>
+                            </div>
+                            <div class="col-md-4">
+                                <fieldset class="form-group view-inner">
+                                    <label class="control-label" for="lastname">Last Name</label>
+                                    <span class="view-fl">{{profiledata.LastName}}</span>
+
+                                </fieldset>
+                            </div>
+                            <div class="col-md-4">
+                                <fieldset class="form-group view-inner">
+                                    <label class="control-label" for="phone">Phone</label>
+                                    <span class="view-fl">{{profiledata.PhoneNumber}}</span>
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <fieldset class="form-group view-inner">
+                                    <label class="control-label" for="email">Email</label>
+                                    <span class="view-fl">{{profiledata.Email}}</span>
+
+                                </fieldset>
+                            </div>
+                            <div class="col-md-4">
+                                <fieldset class="form-group view-inner">
+                                    <label class="control-label" for="Organization">Organization</label>
+                                    <span class="view-fl">{{profiledata.OrganizationName}}</span>
+                                </fieldset>
+                            </div>
+                            <div class="col-md-4">
+                                <fieldset class="form-group view-inner">
+                                    <label class="control-label" for="active">Status</label>
+                                    <span class="view-fl">{{profiledata.IsActive==true?'Active':'Inactive'}}</span>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>                    
+                </form>
+            </div>
+</div>

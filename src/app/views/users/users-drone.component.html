@@ -1,0 +1,53 @@
+<form #myform="ngForm" (ngSubmit)="onSubmit(myform)">
+  <div class="profile_page">
+    <div class="row">
+      <div class="pr_top-sec">
+        <div class="col-md-12">
+          <h2 class="pull-left">Drone Assignation</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>UAV</th>
+              <th>Device Id</th>
+              <th>Device Model Id</th>
+              <th>UIN</th>
+              <th>Digisky Registration</th>
+              <th>Digisky Id</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let uav of uavs">
+              <td>
+                <div class="checkbox checkbox-primary"> <input id="checkbox2" type="checkbox" [(ngModel)]="uav.isSelected" name="!isSelected"> <label for="checkbox2"></label></div>
+              </td>
+              <td>{{uav.Name}}</td>
+              <td>{{uav.DeviceId}}</td>
+              <td>{{uav.DeviceModelId}}</td>
+              <td>{{uav.UIN}}</td>
+              <td>{{uav.UAVDigiSkyRegistrationStatus}}</td>
+              <td>{{uav.UAVDigiSkyId}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <button type="submit" class="btn btn-primary btn-lg">
+      <i class="fa fa-check" aria-hidden="true"></i> Save
+    </button>
+    &nbsp;
+    <button (click)="cancel()" class="btn btn-primary btn-lg">
+      <i class="fa fa-times"></i> Cancel
+    </button>
+  </div>
+</form>
